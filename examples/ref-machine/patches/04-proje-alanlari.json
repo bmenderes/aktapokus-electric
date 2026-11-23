@@ -1,0 +1,11 @@
+{
+  "patchVersion": 1,
+  "source": "user",
+  "description": "Antet için proje alanları",
+  "commands": [
+    { "op": "setProperty", "key": "date", "value": "15.11.2026" },
+    { "op": "setProperty", "key": "drawingNo", "value": "REF-001" },
+    { "op": "setProperty", "key": "drawnBy", "value": "AKE" },
+    { "op": "setProperty", "key": "revision", "value": "A" }
+  ]
+}

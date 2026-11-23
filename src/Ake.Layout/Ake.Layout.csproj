@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ake.Core\Ake.Core.csproj" />
+    <ProjectReference Include="..\Ake.Render\Ake.Render.csproj" />
+  </ItemGroup>
+
+</Project>

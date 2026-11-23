@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>aktapokus-electric-setup</AssemblyName>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <ApplicationIcon>..\..\src\Ake.Editor\Assets\logo.ico</ApplicationIcon>
+    <Product>aktapokus-electric Kurulum</Product>
+    <Description>aktapokus-electric Windows kurulum sihirbazı</Description>
+    <Version>0.1.0</Version>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Fonts.Inter" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="..\..\src\Ake.Editor\Assets\logo.ico" Link="Assets\logo.ico" />
+    <AvaloniaResource Include="..\..\src\Ake.Editor\Assets\logo-256.png" Link="Assets\logo-256.png" />
+    <EmbeddedResource Include="..\..\LICENSE" LogicalName="Ake.Setup.LICENSE.txt" />
+    <EmbeddedResource Include="payload\app.zip" Condition="Exists('payload\app.zip')" LogicalName="Ake.Setup.app.zip" />
+    <EmbeddedResource Include="payload\OllamaSetup.exe" Condition="Exists('payload\OllamaSetup.exe')" LogicalName="Ake.Setup.OllamaSetup.exe" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+{
+  "id": "0193b000-0000-7000-8000-00000000a301",
+  "name": "A3 yatay, 10 kolon",
+  "widthMm": 420,
+  "heightMm": 297,
+  "marginMm": 10,
+  "columns": 10,
+  "rows": 6,
+  "gridBandMm": 5,
+  "titleBlockHeightMm": 20,
+  "fontFamily": "Arial",
+  "firstColumnNumber": 0,
+  "cells": [
+    { "xMm": 0, "yMm": 0, "widthMm": 70, "heightMm": 20, "imageRef": "logo.png" },
+    { "xMm": 70, "yMm": 0, "widthMm": 130, "heightMm": 20, "content": "{page.title}", "fontSizeMm": 3.5 },
+    { "xMm": 200, "yMm": 0, "widthMm": 70, "heightMm": 10, "label": "Proje:", "content": "{project.name}", "fontSizeMm": 2.5 },
+    { "xMm": 200, "yMm": 10, "widthMm": 70, "heightMm": 10, "label": "Tarih:", "content": "{project.date}", "fontSizeMm": 2.5 },
+    { "xMm": 270, "yMm": 0, "widthMm": 50, "heightMm": 10, "label": "Çizim no:", "content": "{project.drawingNo}", "fontSizeMm": 2.5 },
+    { "xMm": 270, "yMm": 10, "widthMm": 25, "heightMm": 10, "label": "Fonksiyon:", "content": "{page.function}", "fontSizeMm": 2.5 },
+    { "xMm": 295, "yMm": 10, "widthMm": 25, "heightMm": 10, "label": "Yer:", "content": "{page.location}", "fontSizeMm": 2.5 },
+    { "xMm": 320, "yMm": 0, "widthMm": 20, "heightMm": 10, "label": "Çizen:", "content": "{project.drawnBy}", "fontSizeMm": 2.5 },
+    { "xMm": 340, "yMm": 0, "widthMm": 25, "heightMm": 10, "label": "Rev.:", "content": "{project.revision}", "fontSizeMm": 2.5 },
+    { "xMm": 365, "yMm": 0, "widthMm": 35, "heightMm": 10, "label": "Sayfa:", "content": "{page.number}", "fontSizeMm": 4, "align": "Right" },
+    { "xMm": 320, "yMm": 10, "widthMm": 40, "heightMm": 10, "label": "Toplam sayfa:", "content": "{page.count}", "fontSizeMm": 2.5, "align": "Right" },
+    { "xMm": 360, "yMm": 10, "widthMm": 40, "heightMm": 10, "label": "Sonraki sayfa:", "content": "{page.next}", "fontSizeMm": 2.5, "align": "Right" }
+  ]
+}

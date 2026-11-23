@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
+    <Product>aktapokus-electric</Product>
+    <Description>aktapokus-electric: açık kaynaklı elektrik projelendirme (E-CAD) uygulaması</Description>
+    <Version>0.1.0</Version>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ake.Ai\Ake.Ai.csproj" />
+    <ProjectReference Include="..\Ake.Core\Ake.Core.csproj" />
+    <ProjectReference Include="..\Ake.Serialization\Ake.Serialization.csproj" />
+    <ProjectReference Include="..\Ake.Render\Ake.Render.csproj" />
+    <ProjectReference Include="..\Ake.Library\Ake.Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Fonts.Inter" />
+    <PackageReference Include="FluentIcons.Avalonia" />
+    <PackageReference Include="Dock.Avalonia" />
+    <PackageReference Include="Dock.Avalonia.Themes.Fluent" />
+    <PackageReference Include="Dock.Model.Avalonia" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Sinks.File" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Ake.Editor.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Logo ve pencere simgesi (assets/ içindeki kaynak dosyaların kopyası). -->
+    <AvaloniaResource Include="Assets\logo.ico" />
+    <AvaloniaResource Include="Assets\logo-256.png" />
+    <!-- Hakkında penceresi lisans metnini gösterir. -->
+    <EmbeddedResource Include="../../LICENSE" LogicalName="Ake.Editor.LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Yeni projenin şablonu; örnekteki dosyayla aynıdır. -->
+  </ItemGroup>
+
+</Project>

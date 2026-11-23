@@ -1,0 +1,114 @@
+{
+  "snippets": [
+    {
+      "title": "Tag yazımı",
+      "keywords": "tag etiket cihaz nokta ucu uc atif yapi fonksiyon yer",
+      "text": "Cihaz tag'i =FONKSIYON+YER-URUN biçimindedir (=M1+P1-K1); kısa hali -K1 yalnızca tek cihaza uyuyorsa geçerlidir, belirsizse tam tag yaz. Bağlantı noktası cihaz tag'inin sonuna :ad eklenir (=M1+P1-K1:A1). Yapı düğümleri (=M1, +P1) projede önceden var olmalıdır; yeni yapı düğümü oluşturma."
+    },
+    {
+      "title": "Cihaz harfleri (EN 81346)",
+      "keywords": "harf kontaktor role sigorta salter motor buton klemens guc kaynagi modul ekle yeni",
+      "text": "Ürün harfleri: K röle/kontaktör, F koruma (sigorta, motor koruma şalteri), Q ana/güç şalteri, M motor, S buton/anahtar, T güç kaynağı/trafo, X klemens, A modül/PLC, E aydınlatma/ısıtıcı. Yeni cihaza aynı fonksiyon ve yerde var olmayan bir numara ver."
+    },
+    {
+      "title": "Uç adlandırma",
+      "keywords": "uc ucu bobin kontak yardimci guc termik a1 a2 13 14 21 22 95 96",
+      "text": "Kontaktör gücü 1/2, 3/4, 5/6; bobin A1/A2; yardımcı açık kontak 13/14, kapalı 21/22; termik koruma 95/96 (kapalı), 97/98 (açık). Motor U1 V1 W1 PE. Güç kaynağı çıkışı + ve -."
+    },
+    {
+      "title": "Kablo renkleri (IEC 60204-1)",
+      "keywords": "renk kablo tel kesit damar faz notr toprak pe siyah mavi kirmizi sari yesil",
+      "text": "Güç devreleri (AC ve DC) siyah (BK); AC kumanda kırmızı (RD); DC kumanda mavi (BU); nötr açık mavi; koruma topraklaması (PE) sarı-yeşil (GNYE). Renk kodları: BK siyah, RD kırmızı, BU mavi, GNYE sarı-yeşil, BN kahverengi, GY gri."
+    },
+    {
+      "title": "Tel numarası",
+      "keywords": "tel numara numarasi ata numaralandir wire atama bagla",
+      "text": "Tel numarasını mevcut bir bağlantıya assignWire ile ver: {\"op\":\"assignWire\",\"from\":...,\"to\":...,\"wire\":{\"number\":\"70\"}}. Aynı potansiyeldeki teller aynı numarayı alır; numara boşluk içermez."
+    },
+    {
+      "title": "Silme",
+      "keywords": "sil silmek kaldir cikar bagla baglanti tel cihaz",
+      "text": "Yalnızca bir bağlantıyı kaldırmak için disconnect kullan (from ve to özetteki bağlantı listesinden). Cihazı bütün bağlantılarıyla kaldırmak için removeDevice kullan; device alanında yalnızca cihaz tag'i olur, ':' içermez."
+    },
+    {
+      "title": "PLC adresi",
+      "keywords": "plc adres giris cikis kanal kanali modul dijital io",
+      "text": "Kanal atamak için assignIo kullan: {\"op\":\"assignIo\",\"channel\":\"=C1+P1-A11:1\",\"address\":\"%IX0.0\",\"description\":\"Start\"}. Kanal modülün bağlantı noktasıdır."
+    }
+  ],
+  "examples": [
+    {
+      "id": "ekle-bobin",
+      "request": "=M2+P1 altına K8 adında bir kontaktör bobini ekle, A2 ucunu -T1:- noktasına, A1 ucunu =C1+P1-A12:3 çıkışına bağla",
+      "patch": {
+        "description": "K8 bobini eklendi ve bağlandı",
+        "commands": [
+          { "op": "addDevice", "tag": "=M2+P1-K8", "kind": "Generic", "description": "Kontaktör bobini", "functions": [ { "kind": "Coil", "connectionPoints": [ "A1", "A2" ] } ] },
+          { "op": "connect", "from": "=M2+P1-K8:A2", "to": "=C1+P1-T1:-" },
+          { "op": "connect", "from": "=C1+P1-A12:3", "to": "=M2+P1-K8:A1" }
+        ]
+      }
+    },
+    {
+      "id": "baglantiyi-sil",
+      "request": "=M2+P1-F2:2 ile =M2+P1-K2:1 arasındaki bağlantıyı kaldır",
+      "patch": {
+        "description": "F2:2 - K2:1 bağlantısı kaldırıldı",
+        "commands": [
+          { "op": "disconnect", "from": "=M2+P1-F2:2", "to": "=M2+P1-K2:1" }
+        ]
+      }
+    },
+    {
+      "id": "etiket-degistir",
+      "request": "=M2+P1-K2 cihazının etiketini K5 yap",
+      "patch": {
+        "description": "K2 etiketi K5 oldu",
+        "commands": [
+          { "op": "retag", "device": "=M2+P1-K2", "tag": "=M2+P1-K5" }
+        ]
+      }
+    },
+    {
+      "id": "tel-numarasi",
+      "request": "=M2+P1-F2:4 ile =M2+P1-K2:3 arasındaki bağlantıya 70 numaralı, 2.5 mm² siyah tel ata",
+      "patch": {
+        "description": "Bağlantıya tel atandı",
+        "commands": [
+          { "op": "assignWire", "from": "=M2+P1-F2:4", "to": "=M2+P1-K2:3", "wire": { "number": "70", "crossSectionMm2": 2.5, "color": "BK" } }
+        ]
+      }
+    },
+    {
+      "id": "ekle-sigorta",
+      "request": "=C1+P1 altına F5 adında 1 ve 2 uçlu bir koruma sigortası ekle, 1 ucunu =G1+P1-Q1:4 noktasına bağla",
+      "patch": {
+        "description": "F5 sigortası eklendi",
+        "commands": [
+          { "op": "addDevice", "tag": "=C1+P1-F5", "kind": "Generic", "description": "Koruma sigortası", "functions": [ { "kind": "Protection", "connectionPoints": [ "1", "2" ] } ] },
+          { "op": "connect", "from": "=G1+P1-Q1:4", "to": "=C1+P1-F5:1" }
+        ]
+      }
+    },
+    {
+      "id": "sayfa-ekle",
+      "request": "7 numaralı Ek sayfa başlıklı yeni bir sayfa ekle",
+      "patch": {
+        "description": "Sayfa eklendi",
+        "commands": [
+          { "op": "addPage", "number": "7", "title": "Ek sayfa" }
+        ]
+      }
+    },
+    {
+      "id": "cihazi-sil",
+      "request": "=C1+P1-F3 besleme sigortasını projeden kaldır",
+      "patch": {
+        "description": "F3 sigortası kaldırıldı",
+        "commands": [
+          { "op": "removeDevice", "device": "=C1+P1-F3" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "patchVersion": 1,
+  "source": "user",
+  "description": "Hatalı örnek: 24 VDC ile 0 V birbirine bağlanıyor (ERC kısa devre bulmalı)",
+  "commands": [
+    { "op": "connect", "from": "-T1:+", "to": "-T1:-", "wire": { "number": "99", "crossSectionMm2": 0.75, "color": "DBU" } }
+  ]
+}

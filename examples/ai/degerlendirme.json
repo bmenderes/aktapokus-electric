@@ -1,0 +1,68 @@
+{
+  "aciklama": "Yapay zeka değerlendirme seti (ADR-0044). Örnek proje: examples/ref-machine. Her vakada istem, beklenen sonuç ve elle yazılmış referans çözüm vardır; referans çözümler modelsiz testle doğrulanır. İstemler bilgi tabanındaki few-shot örneklerinden farklıdır (sızıntı testi). Gerçek modelle: $env:AKE_LIVE_LLM='1'; dotnet test tests/Ake.Ai.Tests --filter Category=Live",
+  "cases": [
+    {
+      "id": "bobin-ekle",
+      "request": "=M1+P1 altına K7 adında bir kontaktör bobini ekle ve A2 ucunu -T1:- noktasına bağla",
+      "expect": { "devices": 1, "connectionsMin": 1, "has": [ "=M1+P1-K7" ] },
+      "solution": { "commands": [
+        { "op": "addDevice", "tag": "=M1+P1-K7", "functions": [ { "kind": "Coil", "connectionPoints": [ "A1", "A2" ] } ] },
+        { "op": "connect", "from": "=M1+P1-K7:A2", "to": "=C1+P1-T1:-" }
+      ] }
+    },
+    {
+      "id": "baglanti-sil",
+      "request": "=M1+P1-F1:2 ile =M1+P1-K1:1 noktaları arasındaki bağlantıyı sil",
+      "expect": { "devices": 0, "connections": -1 },
+      "solution": { "commands": [ { "op": "disconnect", "from": "=M1+P1-F1:2", "to": "=M1+P1-K1:1" } ] }
+    },
+    {
+      "id": "etiket-degistir",
+      "request": "=M1+P1-K1 cihazının etiketini K9 olarak değiştir",
+      "expect": { "devices": 0, "connections": 0, "has": [ "=M1+P1-K9" ], "lacks": [ "=M1+P1-K1" ] },
+      "solution": { "commands": [ { "op": "retag", "device": "=M1+P1-K1", "tag": "=M1+P1-K9" } ] }
+    },
+    {
+      "id": "tel-numarasi",
+      "request": "=M1+P1-F1:4 ile =M1+P1-K1:3 arasındaki bağlantıya 60 numaralı tel ata",
+      "expect": { "devices": 0, "connections": 0, "wire": { "from": "=M1+P1-F1:4", "to": "=M1+P1-K1:3", "number": "60" } },
+      "solution": { "commands": [ { "op": "assignWire", "from": "=M1+P1-F1:4", "to": "=M1+P1-K1:3", "wire": { "number": "60" } } ] }
+    },
+    {
+      "id": "sigorta-ekle",
+      "request": "=M1+P1 altına F9 adında 1 ve 2 uçlu bir koruma sigortası ekle ve 1 ucunu =G1+P1-Q1:6 noktasına bağla",
+      "expect": { "devices": 1, "connectionsMin": 1, "has": [ "=M1+P1-F9" ] },
+      "solution": { "commands": [
+        { "op": "addDevice", "tag": "=M1+P1-F9", "functions": [ { "kind": "Protection", "connectionPoints": [ "1", "2" ] } ] },
+        { "op": "connect", "from": "=G1+P1-Q1:6", "to": "=M1+P1-F9:1" }
+      ] }
+    },
+    {
+      "id": "sayfa-ekle",
+      "request": "8 numaralı Yedek başlıklı yeni bir sayfa ekle",
+      "expect": { "devices": 0, "connections": 0, "pages": 1 },
+      "solution": { "commands": [ { "op": "addPage", "number": "8", "title": "Yedek" } ] }
+    },
+    {
+      "id": "cihaz-kaldir",
+      "request": "=C1+P1-S2 stop butonunu projeden kaldır",
+      "expect": { "devices": -1, "lacks": [ "=C1+P1-S2" ] },
+      "solution": { "commands": [ { "op": "removeDevice", "device": "=C1+P1-S2" } ] }
+    },
+    {
+      "id": "acil-stop-etiket",
+      "request": "=E1+P1-S0 acil stop butonunun etiketini S9 yap",
+      "expect": { "devices": 0, "connections": 0, "has": [ "=E1+P1-S9" ], "lacks": [ "=E1+P1-S0" ] },
+      "solution": { "commands": [ { "op": "retag", "device": "=E1+P1-S0", "tag": "=E1+P1-S9" } ] }
+    },
+    {
+      "id": "sensor-ekle",
+      "request": "=C1+P1 altına B1 adında bir sensör ekle, 24V ucunu =C1+P1-T1:+ noktasına bağla",
+      "expect": { "devices": 1, "connectionsMin": 1, "has": [ "=C1+P1-B1" ] },
+      "solution": { "commands": [
+        { "op": "addDevice", "tag": "=C1+P1-B1", "functions": [ { "kind": "Generic", "connectionPoints": [ "24V", "0V", "OUT" ] } ] },
+        { "op": "connect", "from": "=C1+P1-T1:+", "to": "=C1+P1-B1:24V" }
+      ] }
+    }
+  ]
+}

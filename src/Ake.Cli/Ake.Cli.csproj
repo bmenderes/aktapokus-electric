@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ake</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ake.Ai\Ake.Ai.csproj" />
+    <ProjectReference Include="..\Ake.Core\Ake.Core.csproj" />
+    <ProjectReference Include="..\Ake.Layout\Ake.Layout.csproj" />
+    <ProjectReference Include="..\Ake.Library\Ake.Library.csproj" />
+    <ProjectReference Include="..\Ake.Render\Ake.Render.csproj" />
+    <ProjectReference Include="..\Ake.Reports\Ake.Reports.csproj" />
+    <ProjectReference Include="..\Ake.Serialization\Ake.Serialization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="System.CommandLine" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Ake.Cli.Tests" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+{
+  "patchVersion": 1,
+  "source": "user",
+  "description": "Motor 2 için kütüphaneden yedek kontaktör eklendi",
+  "commands": [
+    { "op": "addDevice", "tag": "=M2+P1-K3", "product": "LC1D09BD", "description": "Yedek kontaktör" },
+    { "op": "connect", "from": "-A12:3", "to": "-K3:A1", "wire": { "number": "57", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "connect", "from": "-K3:A2", "to": "-T1:-", "wire": { "number": "58", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "assignIo", "channel": "-A12:3", "symbolName": "bK3Run", "description": "Yedek kontaktör çalış" }
+  ]
+}

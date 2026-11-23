@@ -1,0 +1,6 @@
+* text=auto
+# Proje dosyalari her platformda LF ile saklanir (canonical format, bkz. ProjectJson).
+*.json text eol=lf
+# Verify snapshot dosyalari: LF, her platformda ayni
+*.verified.txt text eol=lf
+*.verified.svg text eol=lf

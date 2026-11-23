@@ -1,0 +1,18 @@
+<definition width="50" height="60" hotspot_x="25" hotspot_y="30" orientation="dyyy" type="element" link_type="simple" version="0.80">
+    <names>
+        <name lang="en">Push button, normally open</name>
+        <name lang="tr">Start butonu (NO)</name>
+    </names>
+    <informations>aktapokus-electric örnek elemanı, elle yazıldı. Lisans: Apache-2.0</informations>
+    <description>
+        <line x1="0" y1="-30" x2="0" y2="-10" end1="none" end2="none"/>
+        <line x1="0" y1="10" x2="-8" y2="-8" end1="none" end2="none"/>
+        <line x1="0" y1="10" x2="0" y2="30" end1="none" end2="none"/>
+        <polygon x1="-14" y1="-6" x2="-20" y2="-6" x3="-20" y3="6" x4="-14" y4="6" closed="false"/>
+        <arc x="-24" y="-4" width="8" height="8" start="90" angle="180"/>
+        <line x1="-14" y1="0" x2="-4" y2="0" style="line-style:dashed"/>
+        <text x="-22" y="20" text="E" size="7"/>
+        <terminal x="0" y="-30" orientation="n"/>
+        <terminal x="0" y="30" orientation="s"/>
+    </description>
+</definition>

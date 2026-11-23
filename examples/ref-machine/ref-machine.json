@@ -1,0 +1,3230 @@
+{
+  "schemaVersion": 6,
+  "id": "dd42b663-028f-90ae-dd26-be0e7997976d",
+  "name": "Referans makine: iki motorlu konveyör",
+  "properties": {
+    "date": "15.11.2026",
+    "drawingNo": "REF-001",
+    "drawnBy": "AKE",
+    "revision": "A"
+  },
+  "structure": [
+    {
+      "id": "6d73f456-763d-fc60-be2a-2e970cbedeb5",
+      "aspect": "Function",
+      "name": "G1",
+      "description": "Güç dağıtımı"
+    },
+    {
+      "id": "42c232b9-e3b1-83e3-a015-607070200a10",
+      "aspect": "Function",
+      "name": "M1",
+      "description": "Konveyör motoru 1"
+    },
+    {
+      "id": "bbdaf288-5439-e751-8b7e-09060d04dae2",
+      "aspect": "Function",
+      "name": "M2",
+      "description": "Konveyör motoru 2"
+    },
+    {
+      "id": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "aspect": "Function",
+      "name": "C1",
+      "description": "Kontrol ve 24 VDC besleme"
+    },
+    {
+      "id": "d330f6ca-bb25-ca9c-2096-149816252176",
+      "aspect": "Function",
+      "name": "E1",
+      "description": "Acil stop"
+    },
+    {
+      "id": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "aspect": "Location",
+      "name": "P1",
+      "description": "Ana pano"
+    },
+    {
+      "id": "b8869232-ed9c-5d2e-ddba-11ce76f87c88",
+      "aspect": "Location",
+      "name": "S1",
+      "description": "Saha"
+    }
+  ],
+  "devices": [
+    {
+      "id": "5e3bd5f0-a7c8-15a8-f1b7-b6a496a4869d",
+      "tag": "X0",
+      "kind": "TerminalStrip",
+      "functionNodeId": "6d73f456-763d-fc60-be2a-2e970cbedeb5",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Şebeke giriş klemensleri",
+      "functions": [
+        {
+          "id": "b7174d2d-319d-af10-7c9c-ac37b546e2d9",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "L1",
+          "connectionPoints": [
+            {
+              "id": "06884dd7-5890-d936-e231-ecbb93fd3d0b",
+              "name": "L1.a"
+            },
+            {
+              "id": "89643f04-ff91-cf20-ce7b-f17086a55c46",
+              "name": "L1.b"
+            }
+          ]
+        },
+        {
+          "id": "87030f67-1576-70a7-a531-437eda2a5399",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "L2",
+          "connectionPoints": [
+            {
+              "id": "a0f6c84b-cad3-0d28-c5b0-ac3104d18048",
+              "name": "L2.a"
+            },
+            {
+              "id": "6992ab1a-429e-5e14-f5ea-4d7c16d05483",
+              "name": "L2.b"
+            }
+          ]
+        },
+        {
+          "id": "0dd8a503-2f4d-9810-6887-7ff2b676d250",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "L3",
+          "connectionPoints": [
+            {
+              "id": "92aff654-c68e-cd9e-ba2e-3671ce5b2ea7",
+              "name": "L3.a"
+            },
+            {
+              "id": "8d1adab0-6f92-246b-44a0-afa0d34639e7",
+              "name": "L3.b"
+            }
+          ]
+        },
+        {
+          "id": "0420eed6-a9db-921d-30f8-5f7e40673612",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "N",
+          "connectionPoints": [
+            {
+              "id": "9443452b-c65c-30b1-bf7b-f967354436f6",
+              "name": "N.a"
+            },
+            {
+              "id": "5cc8ff0c-3e18-303e-229d-cbe09e3570de",
+              "name": "N.b"
+            }
+          ]
+        },
+        {
+          "id": "6d9e69d8-1a45-6aa1-6676-76ec1a7a548f",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "PE",
+          "connectionPoints": [
+            {
+              "id": "f0cc1e27-827a-f1fd-dec2-2e96d91c4318",
+              "name": "PE.a"
+            },
+            {
+              "id": "d30c6535-6e9b-f270-666e-98a78dcecea5",
+              "name": "PE.b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5736f9ad-6ed6-345e-941f-b171825083f4",
+      "tag": "Q1",
+      "kind": "Generic",
+      "functionNodeId": "6d73f456-763d-fc60-be2a-2e970cbedeb5",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Ana şalter",
+      "functions": [
+        {
+          "id": "b862fd6b-e47d-e3c0-dcf3-c27517b0b76d",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 1",
+          "connectionPoints": [
+            {
+              "id": "0fab9bfb-178c-fd1e-2271-1a62effeabd4",
+              "name": "1"
+            },
+            {
+              "id": "49c2fe44-cc6b-a19b-016e-fe62afa63788",
+              "name": "2"
+            }
+          ]
+        },
+        {
+          "id": "bdc1cfd6-eda4-4791-08c0-024ac38d7515",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 2",
+          "connectionPoints": [
+            {
+              "id": "4d574022-fc19-f83e-4f93-fd14966cc924",
+              "name": "3"
+            },
+            {
+              "id": "74d4384d-7988-5b75-7584-ef880a39929f",
+              "name": "4"
+            }
+          ]
+        },
+        {
+          "id": "0437cfa1-923c-1f7e-6f4c-ce7a161759af",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 3",
+          "connectionPoints": [
+            {
+              "id": "192441ac-8dac-20b7-7fd0-deeb1c63b834",
+              "name": "5"
+            },
+            {
+              "id": "9cb89b47-c575-969f-ecf0-5aef11d88f92",
+              "name": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1c2095cc-ef80-945e-0c50-bc887c9eca1b",
+      "tag": "F1",
+      "kind": "Generic",
+      "functionNodeId": "42c232b9-e3b1-83e3-a015-607070200a10",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Motor koruma şalteri 1",
+      "part": {
+        "manufacturer": "Schneider Electric",
+        "orderCode": "GV2ME10"
+      },
+      "functions": [
+        {
+          "id": "4dcb899e-ddfe-3fa1-8809-df009966a2dd",
+          "kind": "Protection",
+          "passThrough": false,
+          "description": "Kutup 1",
+          "ratedCurrentA": 6.3,
+          "connectionPoints": [
+            {
+              "id": "32ccadc2-8acf-3228-1fda-e5440289f280",
+              "name": "1"
+            },
+            {
+              "id": "80583b30-da27-54ba-bd26-feb3eb0c4953",
+              "name": "2"
+            }
+          ]
+        },
+        {
+          "id": "4ec35e31-68df-72d5-ce57-069092bcd797",
+          "kind": "Protection",
+          "passThrough": false,
+          "description": "Kutup 2",
+          "ratedCurrentA": 6.3,
+          "connectionPoints": [
+            {
+              "id": "f71253c8-09a8-b3ed-48dd-a0154a3ae7ab",
+              "name": "3"
+            },
+            {
+              "id": "2add1504-60d3-dd51-0ccc-15c0e007587c",
+              "name": "4"
+            }
+          ]
+        },
+        {
+          "id": "08105ae8-79e8-5ac1-69d9-ec6c0be11f9b",
+          "kind": "Protection",
+          "passThrough": false,
+          "description": "Kutup 3",
+          "ratedCurrentA": 6.3,
+          "connectionPoints": [
+            {
+              "id": "cd9fd5b2-f34a-71fa-28c9-66a767ec0f2c",
+              "name": "5"
+            },
+            {
+              "id": "84b1a6c6-6b5d-0bb7-7705-0c4117daf382",
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "id": "dcbfd5ee-b268-6714-e3f4-48e685075f62",
+          "kind": "NoContact",
+          "passThrough": false,
+          "description": "Yardımcı kontak",
+          "connectionPoints": [
+            {
+              "id": "379484db-ac43-fa63-fd3d-05540457a118",
+              "name": "13"
+            },
+            {
+              "id": "45406daf-550b-932d-a81b-da96610305c0",
+              "name": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fd392ed3-7c0a-4439-61e1-8755ee24242e",
+      "tag": "K1",
+      "kind": "Generic",
+      "functionNodeId": "42c232b9-e3b1-83e3-a015-607070200a10",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Motor kontaktörü 1",
+      "part": {
+        "manufacturer": "Schneider Electric",
+        "orderCode": "LC1D09BD",
+        "typeDesignation": "TeSys D 9 A, 24 VDC bobin"
+      },
+      "mounting": {
+        "type": "DinRail35",
+        "widthMm": 45,
+        "heightMm": 77,
+        "depthMm": 95,
+        "clearanceMm": 5,
+        "heatLossW": 2.4
+      },
+      "functions": [
+        {
+          "id": "0cd38a58-1f02-6d6d-95ec-5f3eb750d991",
+          "kind": "Coil",
+          "passThrough": false,
+          "description": "Bobin",
+          "connectionPoints": [
+            {
+              "id": "5d254022-37c1-45a5-481b-6555d321a7c1",
+              "name": "A1"
+            },
+            {
+              "id": "1f541536-97e1-8a6e-5e19-be6a5f0382da",
+              "name": "A2"
+            }
+          ]
+        },
+        {
+          "id": "5cc60ae8-291e-3667-ff4e-fda5b5d5929c",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 1",
+          "connectionPoints": [
+            {
+              "id": "e8abb432-b8c2-5396-f96b-e2b6d0fcd1ed",
+              "name": "1"
+            },
+            {
+              "id": "3df9645c-b9e6-bc94-80c5-279e5907f0d6",
+              "name": "2"
+            }
+          ]
+        },
+        {
+          "id": "58ecd0db-10b8-e416-cc37-9d5b1b8d027f",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 2",
+          "connectionPoints": [
+            {
+              "id": "13a7f7c8-1290-14b4-4986-1c9aa5d7b960",
+              "name": "3"
+            },
+            {
+              "id": "51bee46e-d32e-dc96-add6-e5e0796d44f0",
+              "name": "4"
+            }
+          ]
+        },
+        {
+          "id": "7adc407c-5f86-10e6-a170-b7ae9220878f",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 3",
+          "connectionPoints": [
+            {
+              "id": "556fd230-48b1-5663-e7ef-8002a256c964",
+              "name": "5"
+            },
+            {
+              "id": "1228a45b-9dd6-2b4b-1cba-12ed5d6d9973",
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "id": "5e0489bd-ea33-e49b-3c9a-20cff8fad524",
+          "kind": "NoContact",
+          "passThrough": false,
+          "description": "Yardımcı NO",
+          "connectionPoints": [
+            {
+              "id": "a9440158-5c66-dafb-2d8e-4efea50e8dc5",
+              "name": "13"
+            },
+            {
+              "id": "56cab31d-a41b-ca73-bfc4-b3fe145ed841",
+              "name": "14"
+            }
+          ]
+        },
+        {
+          "id": "d1393f66-e845-fad2-e1a4-49cd609b1003",
+          "kind": "NcContact",
+          "passThrough": false,
+          "description": "Yardımcı NC",
+          "connectionPoints": [
+            {
+              "id": "6985d1a4-dbe3-051f-7273-40d74493ef1c",
+              "name": "21"
+            },
+            {
+              "id": "c7841a07-07d9-b2f9-0771-74adda30e206",
+              "name": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15d0c517-b900-0c33-70b5-7b70b08fa026",
+      "tag": "M1",
+      "kind": "Generic",
+      "functionNodeId": "42c232b9-e3b1-83e3-a015-607070200a10",
+      "locationNodeId": "b8869232-ed9c-5d2e-ddba-11ce76f87c88",
+      "description": "Konveyör motoru 1",
+      "functions": [
+        {
+          "id": "92461238-4393-d257-81e4-977ada3de5c8",
+          "kind": "Motor",
+          "passThrough": false,
+          "description": "3 fazlı motor",
+          "connectionPoints": [
+            {
+              "id": "8e9fc86b-5a51-153c-4084-c9a67edc638e",
+              "name": "U1"
+            },
+            {
+              "id": "c9d1528a-3be4-7cfb-f7a7-41e026df8f18",
+              "name": "V1"
+            },
+            {
+              "id": "9a258cc4-35d8-0109-e40e-d83de219541a",
+              "name": "W1"
+            },
+            {
+              "id": "7d5446f4-f5bb-c9ab-fd4f-f0faec1c1427",
+              "name": "PE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9a25a9fe-e97e-fce2-a7eb-690f3698130a",
+      "tag": "F2",
+      "kind": "Generic",
+      "functionNodeId": "bbdaf288-5439-e751-8b7e-09060d04dae2",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Motor koruma şalteri 2",
+      "part": {
+        "manufacturer": "Schneider Electric",
+        "orderCode": "GV2ME10"
+      },
+      "functions": [
+        {
+          "id": "465674c6-39c4-8e92-a796-60c048ac92e6",
+          "kind": "Protection",
+          "passThrough": false,
+          "description": "Kutup 1",
+          "ratedCurrentA": 6.3,
+          "connectionPoints": [
+            {
+              "id": "6208e275-b2b5-2e09-663f-f871ed0e892f",
+              "name": "1"
+            },
+            {
+              "id": "da478c17-d002-eaee-90de-af7274a30e7e",
+              "name": "2"
+            }
+          ]
+        },
+        {
+          "id": "993ee878-7ddf-96c1-a56b-ce00655b7fe5",
+          "kind": "Protection",
+          "passThrough": false,
+          "description": "Kutup 2",
+          "ratedCurrentA": 6.3,
+          "connectionPoints": [
+            {
+              "id": "45785d1b-67ba-f282-fd6b-1822705ab1b4",
+              "name": "3"
+            },
+            {
+              "id": "b8956c9d-618f-172f-4edb-c3632bec3b3e",
+              "name": "4"
+            }
+          ]
+        },
+        {
+          "id": "9ead7c0c-af24-0e94-bdf6-e4e8b5fdf612",
+          "kind": "Protection",
+          "passThrough": false,
+          "description": "Kutup 3",
+          "ratedCurrentA": 6.3,
+          "connectionPoints": [
+            {
+              "id": "e203c9ca-acf1-86cf-1179-3e1ee190ee38",
+              "name": "5"
+            },
+            {
+              "id": "3d2c0bee-ca50-1ebb-354a-b8d023b9d00e",
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "id": "2ca057b0-469d-877c-d04b-0511727d84af",
+          "kind": "NoContact",
+          "passThrough": false,
+          "description": "Yardımcı kontak",
+          "connectionPoints": [
+            {
+              "id": "2f3fd297-a761-31d9-9067-7f5a53c1b482",
+              "name": "13"
+            },
+            {
+              "id": "44a77f33-c5bc-94c4-6ea7-e71a56e7a4db",
+              "name": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ad65235f-8752-74cc-ce26-dcc33cc2219b",
+      "tag": "K2",
+      "kind": "Generic",
+      "functionNodeId": "bbdaf288-5439-e751-8b7e-09060d04dae2",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Motor kontaktörü 2",
+      "part": {
+        "manufacturer": "Schneider Electric",
+        "orderCode": "LC1D09BD",
+        "typeDesignation": "TeSys D 9 A, 24 VDC bobin"
+      },
+      "mounting": {
+        "type": "DinRail35",
+        "widthMm": 45,
+        "heightMm": 77,
+        "depthMm": 95,
+        "clearanceMm": 5,
+        "heatLossW": 2.4
+      },
+      "functions": [
+        {
+          "id": "7232524e-1f05-6821-df88-aa9f72569472",
+          "kind": "Coil",
+          "passThrough": false,
+          "description": "Bobin",
+          "connectionPoints": [
+            {
+              "id": "157c69d2-c389-8519-382a-d25e1dca1e46",
+              "name": "A1"
+            },
+            {
+              "id": "7270884f-0a71-f84a-abd2-23364ba47196",
+              "name": "A2"
+            }
+          ]
+        },
+        {
+          "id": "6d2dd17f-65e7-1761-c028-e4fa015cb273",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 1",
+          "connectionPoints": [
+            {
+              "id": "feb74f6c-39da-5675-7fe5-bfab58df21fc",
+              "name": "1"
+            },
+            {
+              "id": "da55a12a-2b72-bf70-a701-83a1c1564373",
+              "name": "2"
+            }
+          ]
+        },
+        {
+          "id": "7c5a2c12-5ee0-018f-47e5-1ee810e14cd9",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 2",
+          "connectionPoints": [
+            {
+              "id": "4c8d4beb-7015-b13f-2ace-17cf0908ca91",
+              "name": "3"
+            },
+            {
+              "id": "485f122d-7705-357d-e15b-c437db3f1ab8",
+              "name": "4"
+            }
+          ]
+        },
+        {
+          "id": "ae95770e-4648-19ab-e089-922234229195",
+          "kind": "PowerContact",
+          "passThrough": false,
+          "description": "Kutup 3",
+          "connectionPoints": [
+            {
+              "id": "910eb19f-ea8c-439f-7305-b8b7fc0f2e0c",
+              "name": "5"
+            },
+            {
+              "id": "0f4dde3b-c863-118a-241f-271156629719",
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "id": "98924790-248b-ece8-ecac-1c5b82186e09",
+          "kind": "NoContact",
+          "passThrough": false,
+          "description": "Yardımcı NO",
+          "connectionPoints": [
+            {
+              "id": "2716c39b-9493-b9a7-99c5-9fa89ff73ff4",
+              "name": "13"
+            },
+            {
+              "id": "badadf6d-3557-87f9-46c8-a4d6f12b22f5",
+              "name": "14"
+            }
+          ]
+        },
+        {
+          "id": "fa211abe-449e-439f-bb0a-6672f618b11f",
+          "kind": "NcContact",
+          "passThrough": false,
+          "description": "Yardımcı NC",
+          "connectionPoints": [
+            {
+              "id": "2a3f7d16-cec7-7de4-33aa-856379315089",
+              "name": "21"
+            },
+            {
+              "id": "aad6e25a-f48c-fac7-df46-74a3fbf70173",
+              "name": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10307d85-81d3-2e4d-c400-7086452ff0ff",
+      "tag": "M2",
+      "kind": "Generic",
+      "functionNodeId": "bbdaf288-5439-e751-8b7e-09060d04dae2",
+      "locationNodeId": "b8869232-ed9c-5d2e-ddba-11ce76f87c88",
+      "description": "Konveyör motoru 2",
+      "functions": [
+        {
+          "id": "5fedbbd8-c307-38de-3a0c-139d1a0b7a2d",
+          "kind": "Motor",
+          "passThrough": false,
+          "description": "3 fazlı motor",
+          "connectionPoints": [
+            {
+              "id": "97d5e256-8e14-6304-507e-5abf00b0c8a3",
+              "name": "U1"
+            },
+            {
+              "id": "b3ae85b8-3469-5883-f402-9ed93e9d13be",
+              "name": "V1"
+            },
+            {
+              "id": "895e5979-fae7-489f-9b32-8bca7ddf3c34",
+              "name": "W1"
+            },
+            {
+              "id": "22e450af-abea-c9ac-f003-80ce8aac0208",
+              "name": "PE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "41851f64-1981-a757-8269-b22ca7cad2dc",
+      "tag": "X1",
+      "kind": "TerminalStrip",
+      "functionNodeId": "6d73f456-763d-fc60-be2a-2e970cbedeb5",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Motor çıkış klemensleri",
+      "functions": [
+        {
+          "id": "abdf2945-9dd5-eee6-d122-15e9d44cac9f",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "1",
+          "connectionPoints": [
+            {
+              "id": "2ed87829-4778-f022-9ecc-0e057603c3c0",
+              "name": "1.a"
+            },
+            {
+              "id": "c048602e-5ab1-9298-f9f1-495a7c3f848a",
+              "name": "1.b"
+            }
+          ]
+        },
+        {
+          "id": "a6c92919-8dcc-6e3c-ca7f-0badeb32582a",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "2",
+          "connectionPoints": [
+            {
+              "id": "b162e792-8403-df0d-83fb-569c547233c0",
+              "name": "2.a"
+            },
+            {
+              "id": "6bdaab94-2065-f51f-7f68-d2f60c49219b",
+              "name": "2.b"
+            }
+          ]
+        },
+        {
+          "id": "53edfe18-25d6-1ca7-2c9d-340093a5db7c",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "3",
+          "connectionPoints": [
+            {
+              "id": "d00396e0-e533-b6a8-f4ab-75cf8b5c4412",
+              "name": "3.a"
+            },
+            {
+              "id": "c755b8b3-ae86-e37b-9c33-a92d944cbbf7",
+              "name": "3.b"
+            }
+          ]
+        },
+        {
+          "id": "f1f69407-b2d2-44b5-813d-bb8961dbb6a1",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "4",
+          "connectionPoints": [
+            {
+              "id": "c8f1e494-529f-f69d-9cb1-b32a80b965fd",
+              "name": "4.a"
+            },
+            {
+              "id": "137a9c34-f760-d1b3-55f7-a17abcaff183",
+              "name": "4.b"
+            }
+          ]
+        },
+        {
+          "id": "79a28d34-ae7f-f648-78f3-f88cc355c569",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "5",
+          "connectionPoints": [
+            {
+              "id": "23a2ee6e-8173-e72c-f40f-ba3700be433d",
+              "name": "5.a"
+            },
+            {
+              "id": "cc31b4f8-1115-4b4e-18a9-12d03eb5a23f",
+              "name": "5.b"
+            }
+          ]
+        },
+        {
+          "id": "bf733c97-11dc-0b09-f7b7-5e7cf391c183",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "6",
+          "connectionPoints": [
+            {
+              "id": "b68d9af8-14a9-dbc4-2225-5af39ccf4ef2",
+              "name": "6.a"
+            },
+            {
+              "id": "250e8bcf-bdc1-a396-7525-e65cc5def797",
+              "name": "6.b"
+            }
+          ]
+        },
+        {
+          "id": "84b7f9bc-3a14-4ea4-525b-1aae986061e7",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "7",
+          "connectionPoints": [
+            {
+              "id": "07cacb02-aa2e-e929-9ae5-9df9c5ab1616",
+              "name": "7.a"
+            },
+            {
+              "id": "bfb21d96-a442-9074-e957-73791dfd9ed0",
+              "name": "7.b"
+            }
+          ]
+        },
+        {
+          "id": "c7ee1fe3-b486-3192-fe31-e35f4e69df64",
+          "kind": "Terminal",
+          "passThrough": true,
+          "description": "8",
+          "connectionPoints": [
+            {
+              "id": "b775407f-f7b1-2f91-0e19-53a446022b2f",
+              "name": "8.a"
+            },
+            {
+              "id": "627eca77-752d-355e-a03d-b4e81852c0cf",
+              "name": "8.b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2a1411e6-6c90-5a8e-80fd-162e14ab7dad",
+      "tag": "F3",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Besleme sigortası",
+      "functions": [
+        {
+          "id": "10d5b937-f51d-be46-a824-2c027c5a04fd",
+          "kind": "Protection",
+          "passThrough": false,
+          "ratedCurrentA": 6,
+          "connectionPoints": [
+            {
+              "id": "e2f132e9-aca9-b634-e3c8-b5913cd44d15",
+              "name": "1"
+            },
+            {
+              "id": "4d3cf8ec-a41e-be85-0058-7ad5cf1c2cca",
+              "name": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0b525ff6-784a-742e-d439-279805b1a4e7",
+      "tag": "T1",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "24 VDC güç kaynağı",
+      "functions": [
+        {
+          "id": "74ec0e72-e671-309e-d993-23fc04279336",
+          "kind": "PowerSupply",
+          "passThrough": false,
+          "description": "230 VAC / 24 VDC",
+          "connectionPoints": [
+            {
+              "id": "09e996f3-13c6-c49f-e4f7-203ac2601a7f",
+              "name": "L"
+            },
+            {
+              "id": "20377110-0578-a1bb-cc20-bb72839445f6",
+              "name": "N"
+            },
+            {
+              "id": "2b4a4d74-45dd-4ed8-25e6-86edf3362409",
+              "name": "PE"
+            },
+            {
+              "id": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+              "name": "+"
+            },
+            {
+              "id": "d6dec326-8602-e289-75cd-0ec93ec1989d",
+              "name": "-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c82140c7-173b-99dd-57ed-5b177f811f0a",
+      "tag": "A1",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Endüstriyel PC",
+      "part": {
+        "manufacturer": "Beckhoff",
+        "orderCode": "CX5130"
+      },
+      "functions": [
+        {
+          "id": "aa930a69-ef65-d4e7-6332-954afbf0c50e",
+          "kind": "Generic",
+          "passThrough": false,
+          "description": "Besleme",
+          "connectionPoints": [
+            {
+              "id": "bfcdd96f-123d-b32b-52a5-f94c0b9281d0",
+              "name": "24V"
+            },
+            {
+              "id": "567b5589-dfa5-ade2-b7bf-ba00b89042e3",
+              "name": "0V"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c8898f64-5e4e-e04c-0bb4-77a82cfcca2c",
+      "tag": "A10",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "EtherCAT coupler",
+      "part": {
+        "manufacturer": "Beckhoff",
+        "orderCode": "EK1100"
+      },
+      "functions": [
+        {
+          "id": "b46e98c6-9170-af00-7c57-8014164f1701",
+          "kind": "Generic",
+          "passThrough": false,
+          "description": "Besleme",
+          "connectionPoints": [
+            {
+              "id": "43452280-b77c-b00a-a888-4c4f2276896b",
+              "name": "24V"
+            },
+            {
+              "id": "c19bc565-7b46-7edb-c009-89dcd52cc199",
+              "name": "0V"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37f5945a-9970-e359-784e-cabf82e28d5d",
+      "tag": "A11",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "8 kanal dijital giriş",
+      "part": {
+        "manufacturer": "Beckhoff",
+        "orderCode": "EL1008"
+      },
+      "functions": [
+        {
+          "id": "0dec06da-d408-8779-e381-abb3d65953b6",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 1",
+          "connectionPoints": [
+            {
+              "id": "becd0437-26f0-0d8b-fd83-8ce0728702a0",
+              "name": "1"
+            }
+          ]
+        },
+        {
+          "id": "5ea36bb8-8203-8c4c-ee05-b56cf73c2609",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 2",
+          "connectionPoints": [
+            {
+              "id": "2a8f6ee0-e705-3f0e-c7c3-bd34baa665a0",
+              "name": "2"
+            }
+          ]
+        },
+        {
+          "id": "93aa63dd-d8ec-a588-bb08-53bda09cc516",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 3",
+          "connectionPoints": [
+            {
+              "id": "7b114d08-9d16-67d5-31b9-e9a96436a7ed",
+              "name": "3"
+            }
+          ]
+        },
+        {
+          "id": "38fe035d-de7b-a837-347d-71f148e7d655",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 4",
+          "connectionPoints": [
+            {
+              "id": "a06bf0a2-dab5-d6e7-2889-ba8fc1696778",
+              "name": "4"
+            }
+          ]
+        },
+        {
+          "id": "63f06522-f607-cd18-1e78-4b0a1ccf7261",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 5",
+          "connectionPoints": [
+            {
+              "id": "eadc1dc7-9d2c-e80c-0027-9eb86b7f33f1",
+              "name": "5"
+            }
+          ]
+        },
+        {
+          "id": "a747dc9e-20f1-d7c0-4b93-841ee751eef3",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 6",
+          "connectionPoints": [
+            {
+              "id": "3814caa2-d387-d37c-b4b7-58c65b59771e",
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "id": "6dd73ab9-6eb4-6cc8-b307-8b87797334bc",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 7",
+          "connectionPoints": [
+            {
+              "id": "57d2c0e3-0c77-ef57-5753-8fe8350c26c9",
+              "name": "7"
+            }
+          ]
+        },
+        {
+          "id": "67d984a3-3fe1-7215-c83d-f150e738d7cc",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DI 8",
+          "connectionPoints": [
+            {
+              "id": "39688d37-edfb-2f68-5739-dc55abe78cd2",
+              "name": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "70e7f8d8-27db-4ced-ed14-663012a5834d",
+      "tag": "A12",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "8 kanal dijital çıkış",
+      "part": {
+        "manufacturer": "Beckhoff",
+        "orderCode": "EL2008"
+      },
+      "functions": [
+        {
+          "id": "6ad957a1-4a37-520e-6034-167cdc72c52d",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 1",
+          "connectionPoints": [
+            {
+              "id": "ce68dc4a-c092-c176-9583-a28204895234",
+              "name": "1"
+            }
+          ]
+        },
+        {
+          "id": "d87a855e-f3f1-178b-ec33-05edcad597e1",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 2",
+          "connectionPoints": [
+            {
+              "id": "faaadb8b-4061-0e9e-16ca-4a4befd414ed",
+              "name": "2"
+            }
+          ]
+        },
+        {
+          "id": "8b79c636-80bc-109c-f213-bb3417326e35",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 3",
+          "connectionPoints": [
+            {
+              "id": "178fb4c3-f78a-c158-5826-c3ee44c2939c",
+              "name": "3"
+            }
+          ]
+        },
+        {
+          "id": "c0f22d3e-8c6e-421a-5a0e-d2998cf2a0bb",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 4",
+          "connectionPoints": [
+            {
+              "id": "1e2365e0-048c-9633-b9be-6eb7a1863d03",
+              "name": "4"
+            }
+          ]
+        },
+        {
+          "id": "87dd6f16-135f-27a8-cc17-6dfb0d3af908",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 5",
+          "connectionPoints": [
+            {
+              "id": "01b60aea-9b66-be4f-c9b9-fb8d923b8cf4",
+              "name": "5"
+            }
+          ]
+        },
+        {
+          "id": "4710697e-5ce9-c5bb-c712-f44ccd89392d",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 6",
+          "connectionPoints": [
+            {
+              "id": "35b50192-1748-b709-5296-e33cd0edf194",
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "id": "30a11917-8bec-734c-2f86-b994d30e278a",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 7",
+          "connectionPoints": [
+            {
+              "id": "72c24ab6-33b5-1cb0-f35d-403b29372e19",
+              "name": "7"
+            }
+          ]
+        },
+        {
+          "id": "7b8200f9-8d15-6b00-cd86-4429dd9e055d",
+          "kind": "PlcChannel",
+          "passThrough": false,
+          "description": "DO 8",
+          "connectionPoints": [
+            {
+              "id": "efd76c78-46d0-8e2c-ce6c-aa02c70ef2c0",
+              "name": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8e9395a9-d51f-4a66-66d6-187b5aa862e3",
+      "tag": "S0",
+      "kind": "Generic",
+      "functionNodeId": "d330f6ca-bb25-ca9c-2096-149816252176",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Acil stop butonu",
+      "functions": [
+        {
+          "id": "4cb7ac28-3726-bd8f-4de5-adc3424f4e06",
+          "kind": "NcContact",
+          "passThrough": false,
+          "description": "Kanal 1",
+          "connectionPoints": [
+            {
+              "id": "0e1ed8f8-759a-0b70-9a57-b27e0b5802ed",
+              "name": "11"
+            },
+            {
+              "id": "dbd39269-7983-e5ee-5853-1355bda73f18",
+              "name": "12"
+            }
+          ]
+        },
+        {
+          "id": "212ebb5f-7ba7-a7db-c224-6e8065902d80",
+          "kind": "NcContact",
+          "passThrough": false,
+          "description": "Kanal 2",
+          "connectionPoints": [
+            {
+              "id": "e4c9fce2-1025-99b7-3f5b-cec97ae18322",
+              "name": "21"
+            },
+            {
+              "id": "e5b7a01d-7c33-e528-b0e1-6105c0cd1373",
+              "name": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eff4889b-255b-3930-01b2-1b7d83499e4f",
+      "tag": "K0",
+      "kind": "Generic",
+      "functionNodeId": "d330f6ca-bb25-ca9c-2096-149816252176",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Güvenlik rölesi",
+      "functions": [
+        {
+          "id": "17a3afb9-1249-8a65-7d75-3ccf43d1fee8",
+          "kind": "Generic",
+          "passThrough": false,
+          "description": "Besleme",
+          "connectionPoints": [
+            {
+              "id": "ca427178-7377-4754-c883-32c1fbb58a87",
+              "name": "A1"
+            },
+            {
+              "id": "607ab16a-de97-52f0-49db-75bba1b2fe7e",
+              "name": "A2"
+            }
+          ]
+        },
+        {
+          "id": "a1150dec-7695-9d74-f182-fc438d2a118d",
+          "kind": "Generic",
+          "passThrough": false,
+          "description": "Giriş kanalı 1",
+          "connectionPoints": [
+            {
+              "id": "39ec07f7-fb4c-c428-5b42-dceffa548d3a",
+              "name": "S11"
+            },
+            {
+              "id": "eaf427db-49ee-f96d-a7d6-50474d75c8bd",
+              "name": "S12"
+            }
+          ]
+        },
+        {
+          "id": "5e1ae60a-5176-bfe1-bd7c-af3131cedb97",
+          "kind": "Generic",
+          "passThrough": false,
+          "description": "Giriş kanalı 2",
+          "connectionPoints": [
+            {
+              "id": "09c6b4f2-5181-2754-9900-79e9a64b0b84",
+              "name": "S21"
+            },
+            {
+              "id": "472cc7f3-914e-2b37-1202-9d53b964c199",
+              "name": "S22"
+            }
+          ]
+        },
+        {
+          "id": "7fa593ac-4373-0d86-d6fb-846eeb72ac0a",
+          "kind": "NoContact",
+          "passThrough": false,
+          "description": "Güvenlik kontağı 1",
+          "connectionPoints": [
+            {
+              "id": "fcf40cb9-da98-ef30-7179-8b5dfdcea9a9",
+              "name": "13"
+            },
+            {
+              "id": "01f6f43f-1496-328f-4341-156d86fbf013",
+              "name": "14"
+            }
+          ]
+        },
+        {
+          "id": "6ee912ac-1401-ace2-7ba9-d6f2284337e7",
+          "kind": "NoContact",
+          "passThrough": false,
+          "description": "Güvenlik kontağı 2",
+          "connectionPoints": [
+            {
+              "id": "09be8a37-8d23-e745-d56e-f716809b6cb3",
+              "name": "23"
+            },
+            {
+              "id": "3241c97f-608d-fa68-9a5e-007e973fb12e",
+              "name": "24"
+            }
+          ]
+        },
+        {
+          "id": "e90d62d2-9255-3e01-0a23-9f5dfae6e51a",
+          "kind": "NoContact",
+          "passThrough": false,
+          "description": "İzleme kontağı",
+          "connectionPoints": [
+            {
+              "id": "264bafe5-03f1-2a59-5dcb-b1f4a6e88383",
+              "name": "33"
+            },
+            {
+              "id": "852cd774-2713-b2b4-f1a7-214813b13f48",
+              "name": "34"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e3623b44-3f59-aa8a-67f1-cc3c76260f4c",
+      "tag": "S1",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Start butonu",
+      "functions": [
+        {
+          "id": "68d2307c-75d7-83cd-e511-ea524133e0d6",
+          "kind": "NoContact",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "65f7396e-588b-7be9-4cd1-79ce3f76bb3a",
+              "name": "13"
+            },
+            {
+              "id": "a6b2f11b-5076-0e8d-8dcf-2d5036700aac",
+              "name": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d89e8e62-c24a-5433-8f91-179fa902ab2e",
+      "tag": "S2",
+      "kind": "Generic",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef",
+      "description": "Stop butonu",
+      "functions": [
+        {
+          "id": "c3638bec-8f1c-2e25-b190-292c5ac009ee",
+          "kind": "NcContact",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "460ce15e-3e4c-7ec0-d501-1b91f42a3196",
+              "name": "11"
+            },
+            {
+              "id": "91689bb7-7e56-3ee6-6a59-f584290fd291",
+              "name": "12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "72b1987e-75fb-5b47-745a-960efd56cbd1",
+      "from": "06884dd7-5890-d936-e231-ecbb93fd3d0b",
+      "to": "0fab9bfb-178c-fd1e-2271-1a62effeabd4",
+      "wire": {
+        "id": "2ee38541-0a39-73b4-9e3f-d74103f533de",
+        "number": "1",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "42a5f849-85d5-9c65-5214-9efc97f9cdc9",
+      "from": "a0f6c84b-cad3-0d28-c5b0-ac3104d18048",
+      "to": "4d574022-fc19-f83e-4f93-fd14966cc924",
+      "wire": {
+        "id": "40516ee8-a071-1247-1efe-7a372e372819",
+        "number": "2",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "dd2a7636-a2b7-e27e-b701-87ebdace478e",
+      "from": "92aff654-c68e-cd9e-ba2e-3671ce5b2ea7",
+      "to": "192441ac-8dac-20b7-7fd0-deeb1c63b834",
+      "wire": {
+        "id": "c1675359-c443-d53c-e646-85b17565a3d1",
+        "number": "3",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "98b2d221-8950-d9bb-f9a9-d8040fc50995",
+      "from": "49c2fe44-cc6b-a19b-016e-fe62afa63788",
+      "to": "32ccadc2-8acf-3228-1fda-e5440289f280",
+      "wire": {
+        "id": "a636f35d-4b7a-31f7-9551-80e6526627d8",
+        "number": "4",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "aa95e0c2-e278-5370-c57a-3bd16aadd5f9",
+      "from": "74d4384d-7988-5b75-7584-ef880a39929f",
+      "to": "f71253c8-09a8-b3ed-48dd-a0154a3ae7ab",
+      "wire": {
+        "id": "20a2ebd8-6b0e-2dca-e7a4-4c55b261dbe8",
+        "number": "5",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "3cfeef14-0c95-6e7d-1597-b2b691e98bb0",
+      "from": "9cb89b47-c575-969f-ecf0-5aef11d88f92",
+      "to": "cd9fd5b2-f34a-71fa-28c9-66a767ec0f2c",
+      "wire": {
+        "id": "4096bfa2-0ca3-56d9-6cb2-ca7830ee0120",
+        "number": "6",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "6d0c6319-9a44-8fa2-e8be-631ec092c188",
+      "from": "49c2fe44-cc6b-a19b-016e-fe62afa63788",
+      "to": "6208e275-b2b5-2e09-663f-f871ed0e892f",
+      "wire": {
+        "id": "ee6ccf54-994d-284e-e9d8-4595ad960a28",
+        "number": "7",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "bf4a695b-ab8d-fa73-cc8b-e4a1ee7c9651",
+      "from": "74d4384d-7988-5b75-7584-ef880a39929f",
+      "to": "45785d1b-67ba-f282-fd6b-1822705ab1b4",
+      "wire": {
+        "id": "0af6ab7b-0911-0ee9-aee1-2dbda77e431e",
+        "number": "8",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "8940b1a2-fc75-d0d2-a3bc-937d427f91cf",
+      "from": "9cb89b47-c575-969f-ecf0-5aef11d88f92",
+      "to": "e203c9ca-acf1-86cf-1179-3e1ee190ee38",
+      "wire": {
+        "id": "c4e3a333-68e6-6a25-4f2a-af0eebfdf640",
+        "number": "9",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "031b4dfc-ec57-4960-7636-6096639773cb",
+      "from": "80583b30-da27-54ba-bd26-feb3eb0c4953",
+      "to": "e8abb432-b8c2-5396-f96b-e2b6d0fcd1ed",
+      "wire": {
+        "id": "33053ae6-4ad4-5f0a-b7a5-e01af754b067",
+        "number": "10",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "f6b93755-76f8-4676-80c7-67445fae2c86",
+      "from": "2add1504-60d3-dd51-0ccc-15c0e007587c",
+      "to": "13a7f7c8-1290-14b4-4986-1c9aa5d7b960",
+      "wire": {
+        "id": "5a2021fe-b9e7-5433-7cd0-7c2ed3f98e9e",
+        "number": "11",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "c4212eac-5fef-c728-830b-bd4509b00837",
+      "from": "84b1a6c6-6b5d-0bb7-7705-0c4117daf382",
+      "to": "556fd230-48b1-5663-e7ef-8002a256c964",
+      "wire": {
+        "id": "c1cc8ae4-0f20-3bfd-26ab-db66e6022cc5",
+        "number": "12",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "57f21590-eb71-a14b-f624-7a5467a690e6",
+      "from": "da478c17-d002-eaee-90de-af7274a30e7e",
+      "to": "feb74f6c-39da-5675-7fe5-bfab58df21fc",
+      "wire": {
+        "id": "748caaa6-a912-4846-6db0-d0370a9b1cd5",
+        "number": "13",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "00b6e656-61da-f00b-7d35-4b1b1a4dd9fa",
+      "from": "b8956c9d-618f-172f-4edb-c3632bec3b3e",
+      "to": "4c8d4beb-7015-b13f-2ace-17cf0908ca91",
+      "wire": {
+        "id": "5c9b3ab9-9e44-27de-8bf8-32342e778cda",
+        "number": "14",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "3cc5c10b-2b64-12fd-e054-36d330e0794b",
+      "from": "3d2c0bee-ca50-1ebb-354a-b8d023b9d00e",
+      "to": "910eb19f-ea8c-439f-7305-b8b7fc0f2e0c",
+      "wire": {
+        "id": "adcf765f-a6c0-9fc8-42a6-5e59763b34ee",
+        "number": "15",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "af73481d-d1b6-ed72-4023-0b1ac22b79dd",
+      "from": "3df9645c-b9e6-bc94-80c5-279e5907f0d6",
+      "to": "2ed87829-4778-f022-9ecc-0e057603c3c0",
+      "wire": {
+        "id": "2f7c706b-161e-d6dd-238e-d180587ed025",
+        "number": "16",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "5056e089-7912-16ea-360b-906a75dd132c",
+      "from": "51bee46e-d32e-dc96-add6-e5e0796d44f0",
+      "to": "b162e792-8403-df0d-83fb-569c547233c0",
+      "wire": {
+        "id": "178289b0-0d66-f079-1a8d-06fbc55cf570",
+        "number": "17",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "39c9a6e7-6da3-d4ff-2c95-3a0286553cb4",
+      "from": "1228a45b-9dd6-2b4b-1cba-12ed5d6d9973",
+      "to": "d00396e0-e533-b6a8-f4ab-75cf8b5c4412",
+      "wire": {
+        "id": "359d3bed-66b6-5e4b-def2-ec86abfd4fd0",
+        "number": "18",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "b31faa65-78bc-8e7b-6136-1c1dd748482e",
+      "from": "da55a12a-2b72-bf70-a701-83a1c1564373",
+      "to": "23a2ee6e-8173-e72c-f40f-ba3700be433d",
+      "wire": {
+        "id": "ea0ee3d6-5b79-ce51-6860-a1e4d6dc1da6",
+        "number": "19",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "d2c5cf22-579f-350c-fe8e-7f4d5d821792",
+      "from": "485f122d-7705-357d-e15b-c437db3f1ab8",
+      "to": "b68d9af8-14a9-dbc4-2225-5af39ccf4ef2",
+      "wire": {
+        "id": "bb00316e-bb68-04d2-f052-ce34e75362bb",
+        "number": "20",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "6eebac2e-f982-85c9-4767-c1b125941327",
+      "from": "0f4dde3b-c863-118a-241f-271156629719",
+      "to": "07cacb02-aa2e-e929-9ae5-9df9c5ab1616",
+      "wire": {
+        "id": "f69e5982-0cd3-b68b-b55b-f58fbe38b54a",
+        "number": "21",
+        "crossSectionMm2": 2.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "13a5cc03-25fd-e523-a2df-9afaac75e532",
+      "from": "f0cc1e27-827a-f1fd-dec2-2e96d91c4318",
+      "to": "c8f1e494-529f-f69d-9cb1-b32a80b965fd",
+      "wire": {
+        "id": "26f45706-94ee-ce9e-5476-8251dbb0449d",
+        "number": "22",
+        "crossSectionMm2": 2.5,
+        "color": "GNYE"
+      }
+    },
+    {
+      "id": "47b12b43-c85c-dff5-10f4-50b1f5cfe563",
+      "from": "c8f1e494-529f-f69d-9cb1-b32a80b965fd",
+      "to": "b775407f-f7b1-2f91-0e19-53a446022b2f"
+    },
+    {
+      "id": "ab98987d-3e3a-a73b-40c6-e50d2c421cfa",
+      "from": "c048602e-5ab1-9298-f9f1-495a7c3f848a",
+      "to": "8e9fc86b-5a51-153c-4084-c9a67edc638e",
+      "coreId": "d4aa893c-683d-9b22-1521-0be0c4596ed7"
+    },
+    {
+      "id": "de7919dd-e93a-b5b7-ab0e-37ea2558d17f",
+      "from": "6bdaab94-2065-f51f-7f68-d2f60c49219b",
+      "to": "c9d1528a-3be4-7cfb-f7a7-41e026df8f18",
+      "coreId": "c27313e3-36a4-c4a2-58b0-64bf3fd5fd19"
+    },
+    {
+      "id": "d6ffc34f-d526-1fee-4716-70aec3488fb1",
+      "from": "c755b8b3-ae86-e37b-9c33-a92d944cbbf7",
+      "to": "9a258cc4-35d8-0109-e40e-d83de219541a",
+      "coreId": "e10e9b5c-bdd3-c35d-ed0e-814d19b2f022"
+    },
+    {
+      "id": "7e70f49e-d0b6-4e7a-656f-4375fb31b90f",
+      "from": "137a9c34-f760-d1b3-55f7-a17abcaff183",
+      "to": "7d5446f4-f5bb-c9ab-fd4f-f0faec1c1427",
+      "coreId": "f9f69fa6-0095-8e2e-ac97-f4caf0a19eb7"
+    },
+    {
+      "id": "52194977-4b62-00cf-0ed8-8300356cb1b6",
+      "from": "cc31b4f8-1115-4b4e-18a9-12d03eb5a23f",
+      "to": "97d5e256-8e14-6304-507e-5abf00b0c8a3",
+      "coreId": "d3bf8347-3160-5286-9959-190efcdacd45"
+    },
+    {
+      "id": "bb25ec9f-d997-d5d4-cc24-dbf10cc883a8",
+      "from": "250e8bcf-bdc1-a396-7525-e65cc5def797",
+      "to": "b3ae85b8-3469-5883-f402-9ed93e9d13be",
+      "coreId": "fd3b84a0-8a39-a212-3733-54d6108b1907"
+    },
+    {
+      "id": "d59d552b-64a0-a230-6af8-d8ea52e28c30",
+      "from": "bfb21d96-a442-9074-e957-73791dfd9ed0",
+      "to": "895e5979-fae7-489f-9b32-8bca7ddf3c34",
+      "coreId": "b25f8140-c62c-fe47-cf3f-286380c4b340"
+    },
+    {
+      "id": "450148f0-5d9e-f15b-1d98-663de0b6a754",
+      "from": "627eca77-752d-355e-a03d-b4e81852c0cf",
+      "to": "22e450af-abea-c9ac-f003-80ce8aac0208",
+      "coreId": "603bd3bc-55c7-efe1-3082-7b3c1ae9a24b"
+    },
+    {
+      "id": "7df295eb-adf2-ca76-90de-50f1189da41b",
+      "from": "49c2fe44-cc6b-a19b-016e-fe62afa63788",
+      "to": "e2f132e9-aca9-b634-e3c8-b5913cd44d15",
+      "wire": {
+        "id": "5b301d1c-49e3-57ee-61de-4f8db717622a",
+        "number": "23",
+        "crossSectionMm2": 1.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "27372f34-bc8d-de88-4986-8609b6b5ba85",
+      "from": "4d3cf8ec-a41e-be85-0058-7ad5cf1c2cca",
+      "to": "09e996f3-13c6-c49f-e4f7-203ac2601a7f",
+      "wire": {
+        "id": "fd54dc26-2456-acb8-bb42-9b74f3668814",
+        "number": "24",
+        "crossSectionMm2": 1.5,
+        "color": "BK"
+      }
+    },
+    {
+      "id": "94b566a7-c98a-7f05-8b30-4c36a36c25d3",
+      "from": "9443452b-c65c-30b1-bf7b-f967354436f6",
+      "to": "20377110-0578-a1bb-cc20-bb72839445f6",
+      "wire": {
+        "id": "3bda4883-0a6f-75e4-39e7-da8fc238bb3b",
+        "number": "25",
+        "crossSectionMm2": 1.5,
+        "color": "BU"
+      }
+    },
+    {
+      "id": "e7ca5bfd-cc07-fc82-726b-757894fdaf78",
+      "from": "f0cc1e27-827a-f1fd-dec2-2e96d91c4318",
+      "to": "2b4a4d74-45dd-4ed8-25e6-86edf3362409",
+      "wire": {
+        "id": "edf19cfa-4fd3-ab39-acb3-79e3a1ba5078",
+        "number": "26",
+        "crossSectionMm2": 1.5,
+        "color": "GNYE"
+      }
+    },
+    {
+      "id": "7304d960-62c0-8588-5bf0-93dfaabe6363",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "bfcdd96f-123d-b32b-52a5-f94c0b9281d0",
+      "wire": {
+        "id": "76ecd8fd-12db-869a-e6b9-73b23cc5dd56",
+        "number": "27",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "c571b5b4-89c8-81e9-0c3c-21a3a78aba0f",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "43452280-b77c-b00a-a888-4c4f2276896b",
+      "wire": {
+        "id": "a47beabd-0ecd-7dbb-b02c-0736b9c5e786",
+        "number": "28",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "4523c2a9-67fb-c1b8-83c8-1738fd931acf",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "ca427178-7377-4754-c883-32c1fbb58a87",
+      "wire": {
+        "id": "04249558-5b56-2f7d-a10d-52b88fbe0857",
+        "number": "29",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "fc1ca459-de12-4de8-07fd-ffd39fc37b6f",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "65f7396e-588b-7be9-4cd1-79ce3f76bb3a",
+      "wire": {
+        "id": "23166e17-c4af-a2bf-8ff2-1d7f4356a2ff",
+        "number": "30",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "f64810cd-b795-0227-9f74-89bd4dd28624",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "460ce15e-3e4c-7ec0-d501-1b91f42a3196",
+      "wire": {
+        "id": "2f0a9b4f-cb14-a74a-0673-04a489220085",
+        "number": "31",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "555b48e0-9c16-eb3c-e812-2c07fdda6d60",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "a9440158-5c66-dafb-2d8e-4efea50e8dc5",
+      "wire": {
+        "id": "a2c96f81-6177-4dbc-087c-cd539528d3f0",
+        "number": "32",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "632e595d-c9b8-f0b0-3b16-bcf03af6ba3b",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "2716c39b-9493-b9a7-99c5-9fa89ff73ff4",
+      "wire": {
+        "id": "039a4f7a-c1f4-132a-94c2-a25e012b98bc",
+        "number": "33",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "0450f100-7fac-040d-3244-f9321f8d8ac5",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "379484db-ac43-fa63-fd3d-05540457a118",
+      "wire": {
+        "id": "1eef3183-84ce-0587-8974-cf795c823e65",
+        "number": "34",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "3d4845df-1c14-9b36-da6d-0aab97f57b39",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "2f3fd297-a761-31d9-9067-7f5a53c1b482",
+      "wire": {
+        "id": "2c6bd192-4219-9c76-21de-af6e05b3465e",
+        "number": "35",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "537802d5-64dc-7686-754a-f9ba2c9d9cab",
+      "from": "7c0c4401-b968-ac03-7e6f-70b57b942761",
+      "to": "264bafe5-03f1-2a59-5dcb-b1f4a6e88383",
+      "wire": {
+        "id": "035f43f1-1d0a-e836-ab9b-d40677e0b0ec",
+        "number": "36",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "d92f6f62-e38d-da1e-67bc-136b034a843f",
+      "from": "d6dec326-8602-e289-75cd-0ec93ec1989d",
+      "to": "567b5589-dfa5-ade2-b7bf-ba00b89042e3",
+      "wire": {
+        "id": "41de2c34-c96e-ace9-1baa-c69f3e805c6b",
+        "number": "37",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "434096dd-54d3-384c-bfa7-1e98ca3a5132",
+      "from": "d6dec326-8602-e289-75cd-0ec93ec1989d",
+      "to": "c19bc565-7b46-7edb-c009-89dcd52cc199",
+      "wire": {
+        "id": "629ce7fc-2ee6-e823-8e72-06e53f9ad116",
+        "number": "38",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "873a4d2e-c7ba-ab2a-f8e4-f33dce3d0edc",
+      "from": "d6dec326-8602-e289-75cd-0ec93ec1989d",
+      "to": "607ab16a-de97-52f0-49db-75bba1b2fe7e",
+      "wire": {
+        "id": "acdde12d-d6c6-bbb3-fa0b-1acf8ef78d26",
+        "number": "39",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "b269c253-b9af-6773-fb70-a1e05561d336",
+      "from": "d6dec326-8602-e289-75cd-0ec93ec1989d",
+      "to": "1f541536-97e1-8a6e-5e19-be6a5f0382da",
+      "wire": {
+        "id": "3111c068-6999-7327-6fa6-a2d6aa0cbde4",
+        "number": "40",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "8a25d707-59d8-0d35-b948-589ab42870a2",
+      "from": "d6dec326-8602-e289-75cd-0ec93ec1989d",
+      "to": "7270884f-0a71-f84a-abd2-23364ba47196",
+      "wire": {
+        "id": "fcdd4c44-9091-3056-9fc3-ea0a1b897bd9",
+        "number": "41",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "b49d291b-3347-0d22-351f-07b763092943",
+      "from": "39ec07f7-fb4c-c428-5b42-dceffa548d3a",
+      "to": "0e1ed8f8-759a-0b70-9a57-b27e0b5802ed",
+      "wire": {
+        "id": "46d1dddf-26db-49f9-028b-f4b46fa2e624",
+        "number": "42",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "c9632c00-2754-a3c2-9ee3-5bc588c4e8a9",
+      "from": "dbd39269-7983-e5ee-5853-1355bda73f18",
+      "to": "eaf427db-49ee-f96d-a7d6-50474d75c8bd",
+      "wire": {
+        "id": "718929f7-24cc-cc3a-cb83-5afb75fbd2ea",
+        "number": "43",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "cc488280-baa1-0182-434a-1b58f3e66dba",
+      "from": "09c6b4f2-5181-2754-9900-79e9a64b0b84",
+      "to": "e4c9fce2-1025-99b7-3f5b-cec97ae18322",
+      "wire": {
+        "id": "e73e40b8-f12e-1539-6345-ab99eac25eb0",
+        "number": "44",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "3587e147-e768-de87-05cc-9c9cf3a0a029",
+      "from": "e5b7a01d-7c33-e528-b0e1-6105c0cd1373",
+      "to": "472cc7f3-914e-2b37-1202-9d53b964c199",
+      "wire": {
+        "id": "ba7719ee-ffa5-f7a2-493e-017bead50319",
+        "number": "45",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "9b82160d-16bc-473b-4f8e-ba04d7a60588",
+      "from": "a6b2f11b-5076-0e8d-8dcf-2d5036700aac",
+      "to": "becd0437-26f0-0d8b-fd83-8ce0728702a0",
+      "wire": {
+        "id": "17236e66-8dcd-40ed-36e6-9fd24c29be03",
+        "number": "46",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "9b75ba25-4be5-442e-e779-b5b8e2f7aab2",
+      "from": "91689bb7-7e56-3ee6-6a59-f584290fd291",
+      "to": "2a8f6ee0-e705-3f0e-c7c3-bd34baa665a0",
+      "wire": {
+        "id": "9a2adf41-c742-7a21-b3a3-0238d09c085c",
+        "number": "47",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "7af5503d-56be-fb4a-c904-c9f7b1502cf8",
+      "from": "56cab31d-a41b-ca73-bfc4-b3fe145ed841",
+      "to": "7b114d08-9d16-67d5-31b9-e9a96436a7ed",
+      "wire": {
+        "id": "aca8a76c-20c4-338d-3726-4fddbefb16c7",
+        "number": "48",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "e2a91916-fde0-57ab-ef8c-61b6524a6635",
+      "from": "badadf6d-3557-87f9-46c8-a4d6f12b22f5",
+      "to": "a06bf0a2-dab5-d6e7-2889-ba8fc1696778",
+      "wire": {
+        "id": "548acb77-762c-7058-4a5d-adebffc02ff2",
+        "number": "49",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "c073c7cd-37cb-ebd0-7eb3-240788c0a28f",
+      "from": "45406daf-550b-932d-a81b-da96610305c0",
+      "to": "eadc1dc7-9d2c-e80c-0027-9eb86b7f33f1",
+      "wire": {
+        "id": "5179b353-63c1-c61e-b36c-1a60cd9191b7",
+        "number": "50",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "462eff51-f08a-df10-0a18-8053b9ce8033",
+      "from": "44a77f33-c5bc-94c4-6ea7-e71a56e7a4db",
+      "to": "3814caa2-d387-d37c-b4b7-58c65b59771e",
+      "wire": {
+        "id": "b6382e68-b729-0176-e87c-21491655a649",
+        "number": "51",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "7aa8e6c3-47e0-0202-eb22-e116e8f55ccb",
+      "from": "852cd774-2713-b2b4-f1a7-214813b13f48",
+      "to": "57d2c0e3-0c77-ef57-5753-8fe8350c26c9",
+      "wire": {
+        "id": "ed74b614-46fc-955a-b7ec-5f3a7cf76bd5",
+        "number": "52",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "32a720f9-def9-9af4-5402-5335599351ac",
+      "from": "ce68dc4a-c092-c176-9583-a28204895234",
+      "to": "fcf40cb9-da98-ef30-7179-8b5dfdcea9a9",
+      "wire": {
+        "id": "97dc4968-c648-a339-8cc8-18d06f718a7e",
+        "number": "53",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "39af30a4-8519-20e4-9570-9a126a686f29",
+      "from": "01f6f43f-1496-328f-4341-156d86fbf013",
+      "to": "5d254022-37c1-45a5-481b-6555d321a7c1",
+      "wire": {
+        "id": "b78632b0-8fac-94bf-3929-acc3516b8f02",
+        "number": "54",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "7a7555fd-8c57-334c-d26f-83197ebb85c4",
+      "from": "faaadb8b-4061-0e9e-16ca-4a4befd414ed",
+      "to": "09be8a37-8d23-e745-d56e-f716809b6cb3",
+      "wire": {
+        "id": "9ba5a46f-8590-4695-c7f3-aab78dac51b3",
+        "number": "55",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    },
+    {
+      "id": "088c865a-73e0-3d24-f4f1-2ac6fcaac931",
+      "from": "3241c97f-608d-fa68-9a5e-007e973fb12e",
+      "to": "157c69d2-c389-8519-382a-d25e1dca1e46",
+      "wire": {
+        "id": "d8b60ac3-a43a-9f84-a807-5c6d328a39d6",
+        "number": "56",
+        "crossSectionMm2": 0.75,
+        "color": "DBU"
+      }
+    }
+  ],
+  "cables": [
+    {
+      "id": "6985e9e5-0c3b-f37f-4cfe-1be18fcf60ee",
+      "tag": "W1",
+      "type": "4G1.5",
+      "cores": [
+        {
+          "id": "d4aa893c-683d-9b22-1521-0be0c4596ed7",
+          "designation": "1",
+          "crossSectionMm2": 1.5
+        },
+        {
+          "id": "c27313e3-36a4-c4a2-58b0-64bf3fd5fd19",
+          "designation": "2",
+          "crossSectionMm2": 1.5
+        },
+        {
+          "id": "e10e9b5c-bdd3-c35d-ed0e-814d19b2f022",
+          "designation": "3",
+          "crossSectionMm2": 1.5
+        },
+        {
+          "id": "f9f69fa6-0095-8e2e-ac97-f4caf0a19eb7",
+          "designation": "GNYE",
+          "crossSectionMm2": 1.5
+        }
+      ]
+    },
+    {
+      "id": "f1e3003a-8233-9e62-9954-5cfad9b13b48",
+      "tag": "W2",
+      "type": "4G1.5",
+      "cores": [
+        {
+          "id": "d3bf8347-3160-5286-9959-190efcdacd45",
+          "designation": "1",
+          "crossSectionMm2": 1.5
+        },
+        {
+          "id": "fd3b84a0-8a39-a212-3733-54d6108b1907",
+          "designation": "2",
+          "crossSectionMm2": 1.5
+        },
+        {
+          "id": "b25f8140-c62c-fe47-cf3f-286380c4b340",
+          "designation": "3",
+          "crossSectionMm2": 1.5
+        },
+        {
+          "id": "603bd3bc-55c7-efe1-3082-7b3c1ae9a24b",
+          "designation": "GNYE",
+          "crossSectionMm2": 1.5
+        }
+      ]
+    }
+  ],
+  "potentialSources": [
+    {
+      "id": "962e0f58-f601-b1c2-e013-66070051c8ed",
+      "name": "L1",
+      "kind": "Phase",
+      "at": "89643f04-ff91-cf20-ce7b-f17086a55c46"
+    },
+    {
+      "id": "9f4316bb-fbe1-b720-72a7-9fa93c9e6269",
+      "name": "L2",
+      "kind": "Phase",
+      "at": "6992ab1a-429e-5e14-f5ea-4d7c16d05483"
+    },
+    {
+      "id": "0806b69b-3c73-f1be-174c-963c221ad817",
+      "name": "L3",
+      "kind": "Phase",
+      "at": "8d1adab0-6f92-246b-44a0-afa0d34639e7"
+    },
+    {
+      "id": "011b43c0-e7c1-bb6c-95eb-73f0c35a2ffd",
+      "name": "N",
+      "kind": "Neutral",
+      "at": "5cc8ff0c-3e18-303e-229d-cbe09e3570de"
+    },
+    {
+      "id": "599ba560-1d51-dcd2-ae55-5dbc8b573d09",
+      "name": "PE",
+      "kind": "ProtectiveEarth",
+      "at": "d30c6535-6e9b-f270-666e-98a78dcecea5"
+    },
+    {
+      "id": "225a328a-1f88-2297-bb4a-745718452bb0",
+      "name": "24VDC",
+      "kind": "DcPositive",
+      "at": "7c0c4401-b968-ac03-7e6f-70b57b942761"
+    },
+    {
+      "id": "f6a5682b-ff66-d4f6-f191-bf5520414b2f",
+      "name": "0V",
+      "kind": "DcNegative",
+      "at": "d6dec326-8602-e289-75cd-0ec93ec1989d"
+    }
+  ],
+  "controllers": [
+    {
+      "id": "ad791d22-64d2-8f0a-c2d9-f689ce64169c",
+      "deviceId": "c82140c7-173b-99dd-57ed-5b177f811f0a",
+      "name": "CX5130",
+      "networks": [
+        {
+          "id": "bfb4651d-61af-0a69-9d2b-3a1eb40245b9",
+          "kind": "EtherCat",
+          "name": "EtherCAT",
+          "nodes": [
+            {
+              "id": "84767849-0e33-f199-fa16-dae792b722a1",
+              "deviceId": "c8898f64-5e4e-e04c-0bb4-77a82cfcca2c",
+              "name": "EK1100",
+              "position": 1,
+              "ports": [
+                {
+                  "id": "5e68de5b-0b50-9b25-d73f-3947734fb84d",
+                  "name": "X1 IN"
+                },
+                {
+                  "id": "65675135-6c8b-da3e-368f-5e70ee951818",
+                  "name": "X2 OUT"
+                }
+              ],
+              "modules": [
+                {
+                  "id": "1d831fee-3493-e139-5c82-511dd3680100",
+                  "deviceId": "37f5945a-9970-e359-784e-cabf82e28d5d",
+                  "position": 1,
+                  "channels": [
+                    {
+                      "id": "ab06c635-abaf-869d-859b-76650d698886",
+                      "index": 0,
+                      "signalType": "DI",
+                      "functionId": "0dec06da-d408-8779-e381-abb3d65953b6",
+                      "symbolName": "bStartButton",
+                      "description": "Start butonu",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 0,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "561a9009-47b5-22a7-b3aa-e8878ad60e8c",
+                      "index": 1,
+                      "signalType": "DI",
+                      "functionId": "5ea36bb8-8203-8c4c-ee05-b56cf73c2609",
+                      "symbolName": "bStopButton",
+                      "description": "Stop butonu",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 1,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "c1f7eb35-23ac-8fc5-edb6-c267af1a3ce5",
+                      "index": 2,
+                      "signalType": "DI",
+                      "functionId": "93aa63dd-d8ec-a588-bb08-53bda09cc516",
+                      "symbolName": "bK1Feedback",
+                      "description": "K1 geri bildirim",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 2,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ce41e5d3-583d-2d1b-b979-fb9b79212c94",
+                      "index": 3,
+                      "signalType": "DI",
+                      "functionId": "38fe035d-de7b-a837-347d-71f148e7d655",
+                      "symbolName": "bK2Feedback",
+                      "description": "K2 geri bildirim",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 3,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "17eca57f-fbaa-88b6-caa4-a8e15f715212",
+                      "index": 4,
+                      "signalType": "DI",
+                      "functionId": "63f06522-f607-cd18-1e78-4b0a1ccf7261",
+                      "symbolName": "bF1Ok",
+                      "description": "F1 motor koruma",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 4,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "08b23973-586c-80ce-cd32-0730a7f1a86e",
+                      "index": 5,
+                      "signalType": "DI",
+                      "functionId": "a747dc9e-20f1-d7c0-4b93-841ee751eef3",
+                      "symbolName": "bF2Ok",
+                      "description": "F2 motor koruma",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 5,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "3c741b19-37ab-87b2-dfe7-71c9de86b94e",
+                      "index": 6,
+                      "signalType": "DI",
+                      "functionId": "6dd73ab9-6eb4-6cc8-b307-8b87797334bc",
+                      "symbolName": "bSafetyOk",
+                      "description": "Güvenlik rölesi hazır",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 6,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "a6e137be-bd22-e2bf-54e9-bd7193e20913",
+                      "index": 7,
+                      "signalType": "DI",
+                      "functionId": "67d984a3-3fe1-7215-c83d-f150e738d7cc",
+                      "processData": [
+                        {
+                          "name": "Input",
+                          "dataType": "BOOL",
+                          "bitOffset": 7,
+                          "bitLength": 1,
+                          "direction": "Input"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "92200ed9-34b4-f2b5-2e20-d1bac4a227f6",
+                  "deviceId": "70e7f8d8-27db-4ced-ed14-663012a5834d",
+                  "position": 2,
+                  "channels": [
+                    {
+                      "id": "c41f1d5f-527e-dc24-bc1c-8ef189ced75d",
+                      "index": 0,
+                      "signalType": "DO",
+                      "functionId": "6ad957a1-4a37-520e-6034-167cdc72c52d",
+                      "symbolName": "bM1Run",
+                      "description": "Motor 1 çalış",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 0,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "665fe4e3-8b42-fcfa-a422-fc5d176ee79b",
+                      "index": 1,
+                      "signalType": "DO",
+                      "functionId": "d87a855e-f3f1-178b-ec33-05edcad597e1",
+                      "symbolName": "bM2Run",
+                      "description": "Motor 2 çalış",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 1,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "be60799b-c87e-42e0-38e4-567bf8376e95",
+                      "index": 2,
+                      "signalType": "DO",
+                      "functionId": "8b79c636-80bc-109c-f213-bb3417326e35",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 2,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0a09e90b-15a8-1eb6-d772-12db0fbf6ee3",
+                      "index": 3,
+                      "signalType": "DO",
+                      "functionId": "c0f22d3e-8c6e-421a-5a0e-d2998cf2a0bb",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 3,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ceecee84-2803-0f8e-a257-9dae4895b78c",
+                      "index": 4,
+                      "signalType": "DO",
+                      "functionId": "87dd6f16-135f-27a8-cc17-6dfb0d3af908",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 4,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "7f8cf3bc-44ad-7704-6078-ff109ce66b71",
+                      "index": 5,
+                      "signalType": "DO",
+                      "functionId": "4710697e-5ce9-c5bb-c712-f44ccd89392d",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 5,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2cc30d42-abf4-0b6e-c4f7-3fb84a1a50e0",
+                      "index": 6,
+                      "signalType": "DO",
+                      "functionId": "30a11917-8bec-734c-2f86-b994d30e278a",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 6,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "30c74e4a-fb3b-f4ed-c83a-da3ead6a860e",
+                      "index": 7,
+                      "signalType": "DO",
+                      "functionId": "7b8200f9-8d15-6b00-cd86-4429dd9e055d",
+                      "processData": [
+                        {
+                          "name": "Output",
+                          "dataType": "BOOL",
+                          "bitOffset": 7,
+                          "bitLength": 1,
+                          "direction": "Output"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "portLinks": []
+        }
+      ]
+    }
+  ],
+  "sheetTemplates": [
+    {
+      "id": "0193b000-0000-7000-8000-00000000a301",
+      "name": "A3 yatay, 10 kolon",
+      "widthMm": 420,
+      "heightMm": 297,
+      "marginMm": 10,
+      "columns": 10,
+      "rows": 6,
+      "gridBandMm": 5,
+      "titleBlockHeightMm": 20,
+      "fontFamily": "Arial",
+      "firstColumnNumber": 0,
+      "cells": [
+        {
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 70,
+          "heightMm": 20,
+          "fontSizeMm": 3,
+          "align": "Left",
+          "border": true,
+          "imageRef": "logo.png"
+        },
+        {
+          "xMm": 70,
+          "yMm": 0,
+          "widthMm": 130,
+          "heightMm": 20,
+          "content": "{page.title}",
+          "fontSizeMm": 3.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 200,
+          "yMm": 0,
+          "widthMm": 70,
+          "heightMm": 10,
+          "label": "Proje:",
+          "content": "{project.name}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 200,
+          "yMm": 10,
+          "widthMm": 70,
+          "heightMm": 10,
+          "label": "Tarih:",
+          "content": "{project.date}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 270,
+          "yMm": 0,
+          "widthMm": 50,
+          "heightMm": 10,
+          "label": "Çizim no:",
+          "content": "{project.drawingNo}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 270,
+          "yMm": 10,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Fonksiyon:",
+          "content": "{page.function}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 295,
+          "yMm": 10,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Yer:",
+          "content": "{page.location}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 320,
+          "yMm": 0,
+          "widthMm": 20,
+          "heightMm": 10,
+          "label": "Çizen:",
+          "content": "{project.drawnBy}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 340,
+          "yMm": 0,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Rev.:",
+          "content": "{project.revision}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 365,
+          "yMm": 0,
+          "widthMm": 35,
+          "heightMm": 10,
+          "label": "Sayfa:",
+          "content": "{page.number}",
+          "fontSizeMm": 4,
+          "align": "Right",
+          "border": true
+        },
+        {
+          "xMm": 320,
+          "yMm": 10,
+          "widthMm": 40,
+          "heightMm": 10,
+          "label": "Toplam sayfa:",
+          "content": "{page.count}",
+          "fontSizeMm": 2.5,
+          "align": "Right",
+          "border": true
+        },
+        {
+          "xMm": 360,
+          "yMm": 10,
+          "widthMm": 40,
+          "heightMm": 10,
+          "label": "Sonraki sayfa:",
+          "content": "{page.next}",
+          "fontSizeMm": 2.5,
+          "align": "Right",
+          "border": true
+        }
+      ]
+    }
+  ],
+  "symbols": [],
+  "pages": [
+    {
+      "id": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "number": "1",
+      "title": "Güç dağıtımı",
+      "functionNodeId": "6d73f456-763d-fc60-be2a-2e970cbedeb5",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef"
+    },
+    {
+      "id": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "number": "2",
+      "title": "Motor 1",
+      "functionNodeId": "42c232b9-e3b1-83e3-a015-607070200a10",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef"
+    },
+    {
+      "id": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "number": "3",
+      "title": "Kontrol",
+      "functionNodeId": "9f92e368-c7fe-41b3-ec2b-520f6798a114",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef"
+    },
+    {
+      "id": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "number": "4",
+      "title": "Motor 2",
+      "functionNodeId": "bbdaf288-5439-e751-8b7e-09060d04dae2",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef"
+    },
+    {
+      "id": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "number": "5",
+      "title": "Acil stop",
+      "functionNodeId": "d330f6ca-bb25-ca9c-2096-149816252176",
+      "locationNodeId": "19406814-d2cf-87f8-f25b-95b0969fe3ef"
+    }
+  ],
+  "placements": [
+    {
+      "id": "01a1e2ce-28ab-75f9-9ed7-f490c32371df",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "b7174d2d-319d-af10-7c9c-ac37b546e2d9",
+      "role": "Main",
+      "x": 30,
+      "y": 45,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ab-74af-a0d1-a35e49746fce",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "87030f67-1576-70a7-a531-437eda2a5399",
+      "role": "Main",
+      "x": 40,
+      "y": 45,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ab-74b2-a127-11542f63ddb8",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "0dd8a503-2f4d-9810-6887-7ff2b676d250",
+      "role": "Main",
+      "x": 50,
+      "y": 45,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ab-7a77-8a45-d900535c4be5",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "0420eed6-a9db-921d-30f8-5f7e40673612",
+      "role": "Main",
+      "x": 60,
+      "y": 45,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ab-7fab-9ede-06e123af6208",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "6d9e69d8-1a45-6aa1-6676-76ec1a7a548f",
+      "role": "Main",
+      "x": 70,
+      "y": 45,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ab-734d-b391-ee3b03511097",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "b862fd6b-e47d-e3c0-dcf3-c27517b0b76d",
+      "role": "Main",
+      "x": 30,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ab-7ea4-9fa0-642f128298a6",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "bdc1cfd6-eda4-4791-08c0-024ac38d7515",
+      "role": "Main",
+      "x": 40,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ab-7b02-87a0-e4246b2a4631",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "0437cfa1-923c-1f7e-6f4c-ce7a161759af",
+      "role": "Main",
+      "x": 50,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-77c5-8fde-1ae23c3e8046",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "f1f69407-b2d2-44b5-813d-bb8961dbb6a1",
+      "role": "Main",
+      "x": 30,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-771d-9bd5-f46f9f81f017",
+      "pageId": "24f723ab-4fa1-55c9-c504-b9826e79a3c3",
+      "functionId": "c7ee1fe3-b486-3192-fe31-e35f4e69df64",
+      "role": "Main",
+      "x": 40,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-76bc-8348-d7930336cb08",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "4dcb899e-ddfe-3fa1-8809-df009966a2dd",
+      "role": "Main",
+      "x": 30,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-7072-a5b9-9d52a8190338",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "4ec35e31-68df-72d5-ce57-069092bcd797",
+      "role": "Main",
+      "x": 40,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-7683-9379-07cb7354fb36",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "08105ae8-79e8-5ac1-69d9-ec6c0be11f9b",
+      "role": "Main",
+      "x": 50,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-7f32-9357-6af779fc3deb",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "dcbfd5ee-b268-6714-e3f4-48e685075f62",
+      "role": "Main",
+      "x": 60,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-792b-8453-2afbe58c3993",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "5cc60ae8-291e-3667-ff4e-fda5b5d5929c",
+      "role": "Main",
+      "x": 30,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-7fc1-8766-61e313af56d3",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "58ecd0db-10b8-e416-cc37-9d5b1b8d027f",
+      "role": "Main",
+      "x": 40,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-7934-a0d9-b7cdd7dc9103",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "7adc407c-5f86-10e6-a170-b7ae9220878f",
+      "role": "Main",
+      "x": 50,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-7fe8-be6b-dd26ab0d3a53",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "0cd38a58-1f02-6d6d-95ec-5f3eb750d991",
+      "role": "Main",
+      "x": 60,
+      "y": 93,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ac-7a51-9559-b729d7c63929",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "5e0489bd-ea33-e49b-3c9a-20cff8fad524",
+      "role": "Main",
+      "x": 70,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-75d4-b02b-910c6fbde309",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "d1393f66-e845-fad2-e1a4-49cd609b1003",
+      "role": "Main",
+      "x": 80,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-77c0-ac85-cb0b6c353900",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "abdf2945-9dd5-eee6-d122-15e9d44cac9f",
+      "role": "Main",
+      "x": 30,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-73f8-9a14-8ce043a7f750",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "a6c92919-8dcc-6e3c-ca7f-0badeb32582a",
+      "role": "Main",
+      "x": 40,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ac-7041-942e-c1f26ed41c4e",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "53edfe18-25d6-1ca7-2c9d-340093a5db7c",
+      "role": "Main",
+      "x": 50,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ad-71e3-a179-9cb7fbf9d39a",
+      "pageId": "08064069-2efb-7a38-c850-e764cc712bc4",
+      "functionId": "92461238-4393-d257-81e4-977ada3de5c8",
+      "role": "Main",
+      "x": 30,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ad-7839-927a-1af25ec21771",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "10d5b937-f51d-be46-a824-2c027c5a04fd",
+      "role": "Main",
+      "x": 30,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ad-754c-adcb-05ecad8569ac",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "74ec0e72-e671-309e-d993-23fc04279336",
+      "role": "Main",
+      "x": 30,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-744c-82db-8a5055800ce5",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "0dec06da-d408-8779-e381-abb3d65953b6",
+      "role": "Main",
+      "x": 80,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7556-a484-8fa108c99ec2",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "5ea36bb8-8203-8c4c-ee05-b56cf73c2609",
+      "role": "Main",
+      "x": 90,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-75cf-89ae-cf27c419e958",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "93aa63dd-d8ec-a588-bb08-53bda09cc516",
+      "role": "Main",
+      "x": 100,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7726-ac06-f96322657cb8",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "38fe035d-de7b-a837-347d-71f148e7d655",
+      "role": "Main",
+      "x": 110,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7c05-bec0-37849f5c8c80",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "63f06522-f607-cd18-1e78-4b0a1ccf7261",
+      "role": "Main",
+      "x": 120,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-74d3-bcf3-f7845c68aa84",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "a747dc9e-20f1-d7c0-4b93-841ee751eef3",
+      "role": "Main",
+      "x": 130,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7431-ae6d-d1c95e063833",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "6dd73ab9-6eb4-6cc8-b307-8b87797334bc",
+      "role": "Main",
+      "x": 140,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-75ba-8099-23b873a999d1",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "67d984a3-3fe1-7215-c83d-f150e738d7cc",
+      "role": "Main",
+      "x": 150,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-71ca-821d-ddeceee85ba0",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "aa930a69-ef65-d4e7-6332-954afbf0c50e",
+      "role": "Main",
+      "x": 30,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-76e6-ab01-451971336a2c",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "b46e98c6-9170-af00-7c57-8014164f1701",
+      "role": "Main",
+      "x": 60,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-772b-b13b-05905184bfdb",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "68d2307c-75d7-83cd-e511-ea524133e0d6",
+      "role": "Main",
+      "x": 90,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-78ae-a0e6-8b146283284a",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "c3638bec-8f1c-2e25-b190-292c5ac009ee",
+      "role": "Main",
+      "x": 120,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7ef9-8efc-33452d1b5e37",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "6ad957a1-4a37-520e-6034-167cdc72c52d",
+      "role": "Main",
+      "x": 30,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7279-a066-0d499a1e8d4e",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "d87a855e-f3f1-178b-ec33-05edcad597e1",
+      "role": "Main",
+      "x": 40,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-703b-934e-00fb982f6f10",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "8b79c636-80bc-109c-f213-bb3417326e35",
+      "role": "Main",
+      "x": 50,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7348-b697-747aca13003d",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "c0f22d3e-8c6e-421a-5a0e-d2998cf2a0bb",
+      "role": "Main",
+      "x": 60,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-79b3-a279-4ac12b7af0f5",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "87dd6f16-135f-27a8-cc17-6dfb0d3af908",
+      "role": "Main",
+      "x": 70,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-724f-b70f-2f0cb1a15eb3",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "4710697e-5ce9-c5bb-c712-f44ccd89392d",
+      "role": "Main",
+      "x": 80,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7133-a752-706dc17865a6",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "30a11917-8bec-734c-2f86-b994d30e278a",
+      "role": "Main",
+      "x": 90,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7f85-bd4c-0af7edefeb21",
+      "pageId": "00bda6e3-1f5b-fe96-a6f4-10c322d43900",
+      "functionId": "7b8200f9-8d15-6b00-cd86-4429dd9e055d",
+      "role": "Main",
+      "x": 100,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7e9b-9549-e69316aabc65",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "465674c6-39c4-8e92-a796-60c048ac92e6",
+      "role": "Main",
+      "x": 30,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7181-99df-35c676a13a9c",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "993ee878-7ddf-96c1-a56b-ce00655b7fe5",
+      "role": "Main",
+      "x": 40,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7c57-a65b-da50b5915be0",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "9ead7c0c-af24-0e94-bdf6-e4e8b5fdf612",
+      "role": "Main",
+      "x": 50,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-750b-98a1-0f8e3e985de7",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "2ca057b0-469d-877c-d04b-0511727d84af",
+      "role": "Main",
+      "x": 60,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-726a-98e1-429c7a4cf62f",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "6d2dd17f-65e7-1761-c028-e4fa015cb273",
+      "role": "Main",
+      "x": 30,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7717-898f-fcba4756b1ae",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "7c5a2c12-5ee0-018f-47e5-1ee810e14cd9",
+      "role": "Main",
+      "x": 40,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-78e6-a9ac-8988650683e0",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "ae95770e-4648-19ab-e089-922234229195",
+      "role": "Main",
+      "x": 50,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-745b-924d-1c7c3661d0b6",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "7232524e-1f05-6821-df88-aa9f72569472",
+      "role": "Main",
+      "x": 60,
+      "y": 93,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ae-7bd1-bdb4-0a8bad32c616",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "98924790-248b-ece8-ecac-1c5b82186e09",
+      "role": "Main",
+      "x": 70,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7a27-a84b-64ba226892e9",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "fa211abe-449e-439f-bb0a-6672f618b11f",
+      "role": "Main",
+      "x": 80,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-78b7-b0af-c92a9fd5e194",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "79a28d34-ae7f-f648-78f3-f88cc355c569",
+      "role": "Main",
+      "x": 30,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7136-8773-73dfdcddb0f0",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "bf733c97-11dc-0b09-f7b7-5e7cf391c183",
+      "role": "Main",
+      "x": 40,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7675-a5ad-b0e703d7813d",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "84b7f9bc-3a14-4ea4-525b-1aae986061e7",
+      "role": "Main",
+      "x": 50,
+      "y": 126,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-76bf-a111-d4066e46b348",
+      "pageId": "01a1e2ce-26f8-7fa7-bdf9-387ea430ba77",
+      "functionId": "5fedbbd8-c307-38de-3a0c-139d1a0b7a2d",
+      "role": "Main",
+      "x": 30,
+      "y": 174,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7077-a4e7-c02bf785c51e",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "17a3afb9-1249-8a65-7d75-3ccf43d1fee8",
+      "role": "Main",
+      "x": 30,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7ffd-b347-dae2d894584a",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "a1150dec-7695-9d74-f182-fc438d2a118d",
+      "role": "Main",
+      "x": 50,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7a0c-8616-2baaa13384c1",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "5e1ae60a-5176-bfe1-bd7c-af3131cedb97",
+      "role": "Main",
+      "x": 70,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7ebe-99e6-c3ff1d8992bd",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "7fa593ac-4373-0d86-d6fb-846eeb72ac0a",
+      "role": "Main",
+      "x": 80,
+      "y": 45,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ae-70ce-badf-161afaa356ad",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "6ee912ac-1401-ace2-7ba9-d6f2284337e7",
+      "role": "Main",
+      "x": 90,
+      "y": 45,
+      "rotationDeg": 180
+    },
+    {
+      "id": "01a1e2ce-28ae-7e3a-9dd8-fbd0dd7831ee",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "e90d62d2-9255-3e01-0a23-9f5dfae6e51a",
+      "role": "Main",
+      "x": 100,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7915-a158-98167bf2cff3",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "4cb7ac28-3726-bd8f-4de5-adc3424f4e06",
+      "role": "Main",
+      "x": 30,
+      "y": 78,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1e2ce-28ae-7092-964c-db381e5f2038",
+      "pageId": "01a1e2ce-26f9-7b44-ad6a-f74181f74d63",
+      "functionId": "212ebb5f-7ba7-a7db-c224-6e8065902d80",
+      "role": "Main",
+      "x": 40,
+      "y": 78,
+      "rotationDeg": 0
+    }
+  ]
+}

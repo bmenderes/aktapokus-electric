@@ -1,0 +1,17 @@
+{
+  "patchVersion": 1,
+  "source": "user",
+  "description": "Çalışıyor lambası, kullanıcı sembolüyle",
+  "commands": [
+    {
+      "op": "addDevice",
+      "tag": "=C1+P1-H1",
+      "description": "Çalışıyor lambası",
+      "functions": [ { "kind": "Generic", "description": "Lamba", "connectionPoints": ["X1", "X2"] } ]
+    },
+    { "op": "connect", "from": "-A12:3", "to": "-H1:X1", "wire": { "number": "57", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "connect", "from": "-H1:X2", "to": "-T1:-", "wire": { "number": "58", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "assignSymbol", "function": "-H1:X1", "symbol": "Sinyal lambası" },
+    { "op": "assignIo", "channel": "-A12:3", "symbolName": "bRunLamp", "description": "Çalışıyor lambası" }
+  ]
+}

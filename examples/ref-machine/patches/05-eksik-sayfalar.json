@@ -1,0 +1,9 @@
+{
+  "patchVersion": 1,
+  "source": "user",
+  "description": "Motor 2 ve acil stop sayfaları",
+  "commands": [
+    { "op": "addPage", "number": "4", "title": "Motor 2", "function": "M2", "location": "P1" },
+    { "op": "addPage", "number": "5", "title": "Acil stop", "function": "E1", "location": "P1" }
+  ]
+}

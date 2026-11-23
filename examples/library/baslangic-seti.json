@@ -1,0 +1,106 @@
+{
+  "libraryImportVersion": 1,
+  "source": "Üretici kataloglarından elle girilmiş örnek kayıtlar. Değerler doğrulanmadı; gerçek projede üretici verisiyle karşılaştırın.",
+  "license": "Üreticilerin kamuya açık teknik verisi; kayıtların kendisi Apache-2.0",
+  "products": [
+    {
+      "manufacturer": "Schneider Electric",
+      "orderCode": "LC1D09BD",
+      "typeDesignation": "TeSys D 9 A, 24 VDC bobin",
+      "description": "Kontaktör, 3 kutup, 1 NO + 1 NC yardımcı kontak",
+      "category": "Kontaktör",
+      "mounting": { "type": "DinRail35", "widthMm": 45, "heightMm": 77, "depthMm": 95 },
+      "properties": [
+        { "key": "ratedCurrentAc3", "value": "9", "unit": "A" },
+        { "key": "ratedPowerAc3At400V", "value": "4", "unit": "kW" },
+        { "key": "coilVoltage", "value": "24", "unit": "VDC" }
+      ],
+      "functions": [
+        { "kind": "Coil", "description": "Bobin", "connectionPoints": ["A1", "A2"] },
+        { "kind": "PowerContact", "description": "Kutup 1", "connectionPoints": ["1", "2"] },
+        { "kind": "PowerContact", "description": "Kutup 2", "connectionPoints": ["3", "4"] },
+        { "kind": "PowerContact", "description": "Kutup 3", "connectionPoints": ["5", "6"] },
+        { "kind": "NoContact", "description": "Yardımcı NO", "connectionPoints": ["13", "14"] },
+        { "kind": "NcContact", "description": "Yardımcı NC", "connectionPoints": ["21", "22"] }
+      ]
+    },
+    {
+      "manufacturer": "Schneider Electric",
+      "orderCode": "GV2ME10",
+      "typeDesignation": "TeSys GV2ME, 4-6,3 A",
+      "description": "Motor koruma şalteri, 3 kutup",
+      "category": "Motor koruma şalteri",
+      "properties": [
+        { "key": "settingRangeMin", "value": "4", "unit": "A" },
+        { "key": "settingRangeMax", "value": "6.3", "unit": "A" }
+      ],
+      "functions": [
+        { "kind": "Protection", "description": "Kutup 1", "ratedCurrentA": 6.3, "connectionPoints": ["1", "2"] },
+        { "kind": "Protection", "description": "Kutup 2", "ratedCurrentA": 6.3, "connectionPoints": ["3", "4"] },
+        { "kind": "Protection", "description": "Kutup 3", "ratedCurrentA": 6.3, "connectionPoints": ["5", "6"] }
+      ]
+    },
+    {
+      "manufacturer": "Beckhoff",
+      "orderCode": "CX5130",
+      "description": "Gömülü PC",
+      "category": "Kontrolör",
+      "functions": [
+        { "kind": "Generic", "description": "Besleme", "connectionPoints": ["24V", "0V"] }
+      ]
+    },
+    {
+      "manufacturer": "Beckhoff",
+      "orderCode": "EK1100",
+      "description": "EtherCAT coupler",
+      "category": "Bus coupler",
+      "mounting": { "type": "DinRail35", "widthMm": 44, "heightMm": 100, "depthMm": 68 },
+      "functions": [
+        { "kind": "Generic", "description": "Besleme", "connectionPoints": ["24V", "0V"] }
+      ]
+    },
+    {
+      "manufacturer": "Beckhoff",
+      "orderCode": "EL1008",
+      "description": "EtherCAT terminal, 8 kanal dijital giriş, 24 VDC",
+      "category": "PLC giriş modülü",
+      "mounting": { "type": "DinRail35", "widthMm": 12, "heightMm": 100, "depthMm": 68 },
+      "properties": [
+        { "key": "channels", "value": "8" },
+        { "key": "signalType", "value": "DI" }
+      ],
+      "functions": [
+        { "kind": "PlcChannel", "description": "DI 1", "connectionPoints": ["1"] },
+        { "kind": "PlcChannel", "description": "DI 2", "connectionPoints": ["2"] },
+        { "kind": "PlcChannel", "description": "DI 3", "connectionPoints": ["3"] },
+        { "kind": "PlcChannel", "description": "DI 4", "connectionPoints": ["4"] },
+        { "kind": "PlcChannel", "description": "DI 5", "connectionPoints": ["5"] },
+        { "kind": "PlcChannel", "description": "DI 6", "connectionPoints": ["6"] },
+        { "kind": "PlcChannel", "description": "DI 7", "connectionPoints": ["7"] },
+        { "kind": "PlcChannel", "description": "DI 8", "connectionPoints": ["8"] }
+      ]
+    },
+    {
+      "manufacturer": "Beckhoff",
+      "orderCode": "EL2008",
+      "description": "EtherCAT terminal, 8 kanal dijital çıkış, 24 VDC, 0,5 A",
+      "category": "PLC çıkış modülü",
+      "mounting": { "type": "DinRail35", "widthMm": 12, "heightMm": 100, "depthMm": 68 },
+      "properties": [
+        { "key": "channels", "value": "8" },
+        { "key": "signalType", "value": "DO" },
+        { "key": "outputCurrentPerChannel", "value": "0.5", "unit": "A" }
+      ],
+      "functions": [
+        { "kind": "PlcChannel", "description": "DO 1", "connectionPoints": ["1"] },
+        { "kind": "PlcChannel", "description": "DO 2", "connectionPoints": ["2"] },
+        { "kind": "PlcChannel", "description": "DO 3", "connectionPoints": ["3"] },
+        { "kind": "PlcChannel", "description": "DO 4", "connectionPoints": ["4"] },
+        { "kind": "PlcChannel", "description": "DO 5", "connectionPoints": ["5"] },
+        { "kind": "PlcChannel", "description": "DO 6", "connectionPoints": ["6"] },
+        { "kind": "PlcChannel", "description": "DO 7", "connectionPoints": ["7"] },
+        { "kind": "PlcChannel", "description": "DO 8", "connectionPoints": ["8"] }
+      ]
+    }
+  ]
+}

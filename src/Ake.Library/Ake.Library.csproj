@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ake.Core\Ake.Core.csproj" />
+    <!-- Sembol tanımı kütüphanede, proje dosyasıyla aynı JSON biçiminde saklanır. -->
+    <ProjectReference Include="..\Ake.Serialization\Ake.Serialization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ACadSharp" />
+    <PackageReference Include="ClosedXML" />
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+    <PackageReference Include="PdfPig" />
+  </ItemGroup>
+
+</Project>

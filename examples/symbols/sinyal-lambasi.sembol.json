@@ -1,0 +1,17 @@
+{
+  "id": "0193c000-0000-7000-8000-00000000c001",
+  "name": "Sinyal lambası",
+  "source": "aktapokus-electric örnek sembolü, elle çizildi",
+  "license": "Apache-2.0",
+  "shapes": [
+    { "type": "line", "x1": 0, "y1": 0, "x2": 0, "y2": 3.5 },
+    { "type": "circle", "x": 0, "y": 7.5, "radius": 4 },
+    { "type": "line", "x1": -2.83, "y1": 4.67, "x2": 2.83, "y2": 10.33 },
+    { "type": "line", "x1": -2.83, "y1": 10.33, "x2": 2.83, "y2": 4.67 },
+    { "type": "line", "x1": 0, "y1": 11.5, "x2": 0, "y2": 15 }
+  ],
+  "pins": [
+    { "x": 0, "y": 0, "directionX": 0, "directionY": -1 },
+    { "x": 0, "y": 15, "directionX": 0, "directionY": 1 }
+  ]
+}

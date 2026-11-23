@@ -1,0 +1,10 @@
+{
+  "title": "Makine I/O",
+  "columns": [
+    { "key": "module", "header": "Modül" },
+    { "key": "terminal", "header": "Klemens" },
+    { "key": "channel", "header": "Nr" },
+    { "key": "symbol", "header": "İsim" },
+    { "key": "target", "header": "Kod" }
+  ]
+}

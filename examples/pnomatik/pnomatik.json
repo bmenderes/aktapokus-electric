@@ -1,0 +1,1368 @@
+{
+  "schemaVersion": 6,
+  "id": "01a1f4a6-ce19-7acd-808c-8d718514204e",
+  "name": "Pnömatik örnek: silindir kumandası",
+  "properties": {
+    "date": "19.11.2026",
+    "description": "Çift etkili silindirin 5/2 selenoid valfle kumandası",
+    "drawingNo": "PNO-001",
+    "drawnBy": "AKE",
+    "revision": "A"
+  },
+  "structure": [
+    {
+      "id": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "aspect": "Function",
+      "name": "P1",
+      "description": "Pnömatik devre"
+    },
+    {
+      "id": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "aspect": "Location",
+      "name": "S1",
+      "description": "Makine"
+    }
+  ],
+  "devices": [
+    {
+      "id": "01a1f4a6-ce1a-72ff-93ba-bc8dd456c72e",
+      "tag": "M1",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "Kompresör",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-7a7f-bf1d-203a55c070cc",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "b5ab320c-b993-8715-1e7c-fd37299c221e",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-7edb-8de8-62ae38ce1d49",
+              "name": "1",
+              "kind": "Pneumatic",
+              "connector": "Thread",
+              "connectorCode": "G1/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1f4a6-ce1a-7086-9397-b42a01f7d3e8",
+      "tag": "F1",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "Hava hazırlama ünitesi",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-7e9f-a9cd-ae5b32519ca2",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "153fab36-dc2a-cf13-ede2-bad9459f6a5a",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-7a01-9046-f7bedcf54bfa",
+              "name": "1",
+              "kind": "Pneumatic",
+              "connector": "Thread",
+              "connectorCode": "G1/4"
+            },
+            {
+              "id": "01a1f4a6-ce1a-786f-a514-a58b2b862b97",
+              "name": "2",
+              "kind": "Pneumatic",
+              "connector": "Thread",
+              "connectorCode": "G1/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1f4a6-ce1a-78fe-aa18-d4aba880cd31",
+      "tag": "Q1",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "5/2 valf, selenoid / yay",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-7b58-8391-89c08ef7d15b",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "2d389265-e04b-9b6a-9bfb-872cc8a8e5c4",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-700b-ae06-c4d3dc8da8ba",
+              "name": "4",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            },
+            {
+              "id": "01a1f4a6-ce1a-7a8b-8ce1-1874470c86d7",
+              "name": "2",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            },
+            {
+              "id": "01a1f4a6-ce1a-73e1-8280-a6fc570f5f4a",
+              "name": "5",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            },
+            {
+              "id": "01a1f4a6-ce1a-797a-829b-f0992ba3296a",
+              "name": "1",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            },
+            {
+              "id": "01a1f4a6-ce1a-78e4-9738-6ffb0c6a0910",
+              "name": "3",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            }
+          ]
+        },
+        {
+          "id": "01a1f4a6-ce1a-7802-9251-190c39e1cc32",
+          "kind": "Coil",
+          "passThrough": false,
+          "symbolId": "c818788d-9246-7f18-f8dc-26a58563cb96",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-7f89-9e8d-382910bb9b19",
+              "name": "A1",
+              "kind": "Power"
+            },
+            {
+              "id": "01a1f4a6-ce1a-7797-b50d-64972ccf05a0",
+              "name": "A2",
+              "kind": "Power"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1f4a6-ce1a-764d-a4ce-d6a6de9f79c7",
+      "tag": "Q2",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "Hız kontrol valfi (A)",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-7459-bcb3-1426c142b0c5",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "2e618cd3-b959-9936-f819-c69b3a7e7522",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-7224-9c75-89def5b34bcc",
+              "name": "1",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            },
+            {
+              "id": "01a1f4a6-ce1a-7a1a-bdd9-723b4eb9a13b",
+              "name": "2",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1f4a6-ce1a-72cc-82c6-a71b0955fc54",
+      "tag": "Q3",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "Hız kontrol valfi (B)",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-7373-b70f-c8829a3d47d0",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "2e618cd3-b959-9936-f819-c69b3a7e7522",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-769e-ad4c-6e1591b65582",
+              "name": "1",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            },
+            {
+              "id": "01a1f4a6-ce1a-7414-96a4-a18942bdbfe3",
+              "name": "2",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1f4a6-ce1a-79b2-b9a1-ca0192aced19",
+      "tag": "M2",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "Çift etkili silindir",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-70af-8c21-01d8b4442ff1",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "0bc2d589-a712-58e8-a59a-c4092b290371",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-7552-a971-b904182987f7",
+              "name": "A",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            },
+            {
+              "id": "01a1f4a6-ce1a-7144-9e53-51eddd52b453",
+              "name": "B",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1f4a6-ce1a-779f-83da-92178ba45e54",
+      "tag": "R1",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "Susturucu",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-70ac-aa19-eeb4d2d9d615",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "2d282a0d-1ac9-9383-23dd-59ae3705341f",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-72ea-8468-e6887e5d869f",
+              "name": "3",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1f4a6-ce1a-7a88-8bfd-ee3a0b859f3c",
+      "tag": "R2",
+      "kind": "Generic",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "description": "Susturucu",
+      "functions": [
+        {
+          "id": "01a1f4a6-ce1a-7cc6-bef2-26376b5f22a2",
+          "kind": "Generic",
+          "passThrough": false,
+          "symbolId": "2d282a0d-1ac9-9383-23dd-59ae3705341f",
+          "connectionPoints": [
+            {
+              "id": "01a1f4a6-ce1a-72d1-9bc4-6ec2dea7e349",
+              "name": "3",
+              "kind": "Pneumatic",
+              "connector": "PushIn",
+              "connectorCode": "Ø6 mm"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "01a1f4a6-ce1a-7649-b229-26a9d85c91ea",
+      "from": "01a1f4a6-ce1a-7edb-8de8-62ae38ce1d49",
+      "to": "01a1f4a6-ce1a-7a01-9046-f7bedcf54bfa",
+      "kind": "3ef24909-ee25-9705-8eea-4b4bf241baf9"
+    },
+    {
+      "id": "01a1f4a6-ce1a-7fc4-a476-410ac7826eb8",
+      "from": "01a1f4a6-ce1a-786f-a514-a58b2b862b97",
+      "to": "01a1f4a6-ce1a-797a-829b-f0992ba3296a",
+      "kind": "3ef24909-ee25-9705-8eea-4b4bf241baf9"
+    },
+    {
+      "id": "01a1f4a6-ce1a-7425-be9f-936ab67b1219",
+      "from": "01a1f4a6-ce1a-700b-ae06-c4d3dc8da8ba",
+      "to": "01a1f4a6-ce1a-7224-9c75-89def5b34bcc",
+      "kind": "3ef24909-ee25-9705-8eea-4b4bf241baf9"
+    },
+    {
+      "id": "01a1f4a6-ce1a-78ec-8bcd-659fe5a2a791",
+      "from": "01a1f4a6-ce1a-7a1a-bdd9-723b4eb9a13b",
+      "to": "01a1f4a6-ce1a-7552-a971-b904182987f7",
+      "kind": "3ef24909-ee25-9705-8eea-4b4bf241baf9"
+    },
+    {
+      "id": "01a1f4a6-ce1a-73b6-8507-b4cb9090b789",
+      "from": "01a1f4a6-ce1a-7a8b-8ce1-1874470c86d7",
+      "to": "01a1f4a6-ce1a-769e-ad4c-6e1591b65582",
+      "kind": "3ef24909-ee25-9705-8eea-4b4bf241baf9"
+    },
+    {
+      "id": "01a1f4a6-ce1a-7838-abcf-3fb46ec685b4",
+      "from": "01a1f4a6-ce1a-7414-96a4-a18942bdbfe3",
+      "to": "01a1f4a6-ce1a-7144-9e53-51eddd52b453",
+      "kind": "3ef24909-ee25-9705-8eea-4b4bf241baf9"
+    },
+    {
+      "id": "01a1f4a6-ce1a-7995-9665-ffd9cd832cb9",
+      "from": "01a1f4a6-ce1a-78e4-9738-6ffb0c6a0910",
+      "to": "01a1f4a6-ce1a-72ea-8468-e6887e5d869f",
+      "kind": "53028af9-d74c-e066-7748-84e11250f578"
+    },
+    {
+      "id": "01a1f4a6-ce1a-777f-9e54-cfa0776fd002",
+      "from": "01a1f4a6-ce1a-73e1-8280-a6fc570f5f4a",
+      "to": "01a1f4a6-ce1a-72d1-9bc4-6ec2dea7e349",
+      "kind": "53028af9-d74c-e066-7748-84e11250f578"
+    }
+  ],
+  "cables": [],
+  "potentialSources": [],
+  "controllers": [],
+  "sheetTemplates": [
+    {
+      "id": "0193b000-0000-7000-8000-00000000a301",
+      "name": "A3 yatay, 10 kolon",
+      "widthMm": 420,
+      "heightMm": 297,
+      "marginMm": 10,
+      "columns": 10,
+      "rows": 6,
+      "gridBandMm": 5,
+      "titleBlockHeightMm": 20,
+      "fontFamily": "Arial",
+      "firstColumnNumber": 0,
+      "cells": [
+        {
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 70,
+          "heightMm": 20,
+          "fontSizeMm": 3,
+          "align": "Left",
+          "border": true,
+          "imageRef": "logo.png"
+        },
+        {
+          "xMm": 70,
+          "yMm": 0,
+          "widthMm": 130,
+          "heightMm": 20,
+          "content": "{page.title}",
+          "fontSizeMm": 3.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 200,
+          "yMm": 0,
+          "widthMm": 70,
+          "heightMm": 10,
+          "label": "Proje:",
+          "content": "{project.name}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 200,
+          "yMm": 10,
+          "widthMm": 70,
+          "heightMm": 10,
+          "label": "Tarih:",
+          "content": "{project.date}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 270,
+          "yMm": 0,
+          "widthMm": 50,
+          "heightMm": 10,
+          "label": "Çizim no:",
+          "content": "{project.drawingNo}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 270,
+          "yMm": 10,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Fonksiyon:",
+          "content": "{page.function}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 295,
+          "yMm": 10,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Yer:",
+          "content": "{page.location}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 320,
+          "yMm": 0,
+          "widthMm": 20,
+          "heightMm": 10,
+          "label": "Çizen:",
+          "content": "{project.drawnBy}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 340,
+          "yMm": 0,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Rev.:",
+          "content": "{project.revision}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 365,
+          "yMm": 0,
+          "widthMm": 35,
+          "heightMm": 10,
+          "label": "Sayfa:",
+          "content": "{page.number}",
+          "fontSizeMm": 4,
+          "align": "Right",
+          "border": true
+        },
+        {
+          "xMm": 320,
+          "yMm": 10,
+          "widthMm": 40,
+          "heightMm": 10,
+          "label": "Toplam sayfa:",
+          "content": "{page.count}",
+          "fontSizeMm": 2.5,
+          "align": "Right",
+          "border": true
+        },
+        {
+          "xMm": 360,
+          "yMm": 10,
+          "widthMm": 40,
+          "heightMm": 10,
+          "label": "Sonraki sayfa:",
+          "content": "{page.next}",
+          "fontSizeMm": 2.5,
+          "align": "Right",
+          "border": true
+        }
+      ]
+    }
+  ],
+  "symbols": [
+    {
+      "id": "b5ab320c-b993-8715-1e7c-fd37299c221e",
+      "name": "Kompresör",
+      "shapes": [
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 4,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "circle",
+          "x": 0,
+          "y": 10,
+          "radius": 6,
+          "strokeMm": 0.25,
+          "filled": false
+        },
+        {
+          "type": "line",
+          "x1": -4.5,
+          "y1": 13,
+          "x2": 0,
+          "y2": 6,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 6,
+          "x2": 4.5,
+          "y2": 13,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -4.5,
+          "y1": 13,
+          "x2": 4.5,
+          "y2": 13,
+          "strokeMm": 0.25
+        }
+      ],
+      "pins": [
+        {
+          "x": 0,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "1",
+          "kind": "Pneumatic",
+          "connector": "Thread",
+          "connectorCode": "G1/4"
+        }
+      ],
+      "source": "aktapokus-electric standart seti",
+      "license": "Apache-2.0 (aktapokus-electric ile birlikte; kendi çizimimiz)",
+      "deviceName": "Kompresör",
+      "tagLetter": "M"
+    },
+    {
+      "id": "153fab36-dc2a-cf13-ede2-bad9459f6a5a",
+      "name": "Hava hazırlama ünitesi (FRL)",
+      "shapes": [
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 5,
+          "x2": 5,
+          "y2": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 5,
+          "y1": 10,
+          "x2": 0,
+          "y2": 15,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 15,
+          "x2": -5,
+          "y2": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -5,
+          "y1": 10,
+          "x2": 0,
+          "y2": 5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 15,
+          "x2": 0,
+          "y2": 20,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -2.5,
+          "y1": 12.5,
+          "x2": 2.5,
+          "y2": 7.5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -2.5,
+          "y1": 7.5,
+          "x2": 2.5,
+          "y2": 12.5,
+          "strokeMm": 0.25
+        }
+      ],
+      "pins": [
+        {
+          "x": 0,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "1",
+          "kind": "Pneumatic",
+          "connector": "Thread",
+          "connectorCode": "G1/4"
+        },
+        {
+          "x": 0,
+          "y": 20,
+          "directionX": 0,
+          "directionY": 1,
+          "name": "2",
+          "kind": "Pneumatic",
+          "connector": "Thread",
+          "connectorCode": "G1/4"
+        }
+      ],
+      "source": "aktapokus-electric standart seti",
+      "license": "Apache-2.0 (aktapokus-electric ile birlikte; kendi çizimimiz)",
+      "deviceName": "Hava hazırlama ünitesi",
+      "tagLetter": "F"
+    },
+    {
+      "id": "2d389265-e04b-9b6a-9bfb-872cc8a8e5c4",
+      "name": "5/2 valf, selenoid / yay",
+      "shapes": [
+        {
+          "type": "rect",
+          "x": 0,
+          "y": 5,
+          "width": 18,
+          "height": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "rect",
+          "x": 18,
+          "y": 5,
+          "width": 18,
+          "height": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 9,
+          "y1": 14,
+          "x2": 4.5,
+          "y2": 6,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 4.5,
+          "y1": 6,
+          "x2": 4.61,
+          "y2": 7.8,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 4.5,
+          "y1": 6,
+          "x2": 5.98,
+          "y2": 7.03,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 13.5,
+          "y1": 6,
+          "x2": 15,
+          "y2": 14,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 15,
+          "y1": 14,
+          "x2": 15.47,
+          "y2": 12.26,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 15,
+          "y1": 14,
+          "x2": 13.93,
+          "y2": 12.55,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 27,
+          "y1": 14,
+          "x2": 31.5,
+          "y2": 6,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 31.5,
+          "y1": 6,
+          "x2": 30.02,
+          "y2": 7.03,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 31.5,
+          "y1": 6,
+          "x2": 31.39,
+          "y2": 7.8,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 22.5,
+          "y1": 6,
+          "x2": 21,
+          "y2": 14,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 21,
+          "y1": 14,
+          "x2": 22.07,
+          "y2": 12.55,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 21,
+          "y1": 14,
+          "x2": 20.53,
+          "y2": 12.26,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 22.5,
+          "y1": 0,
+          "x2": 22.5,
+          "y2": 5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 31.5,
+          "y1": 0,
+          "x2": 31.5,
+          "y2": 5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 21,
+          "y1": 15,
+          "x2": 21,
+          "y2": 20,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 27,
+          "y1": 15,
+          "x2": 27,
+          "y2": 20,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 33,
+          "y1": 15,
+          "x2": 33,
+          "y2": 20,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "rect",
+          "x": -6,
+          "y": 7,
+          "width": 6,
+          "height": 6,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -6,
+          "y1": 13,
+          "x2": 0,
+          "y2": 7,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 36,
+          "y1": 10,
+          "x2": 36.6,
+          "y2": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 36.6,
+          "y1": 10,
+          "x2": 37,
+          "y2": 8,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 37,
+          "y1": 8,
+          "x2": 37.8,
+          "y2": 12,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 37.8,
+          "y1": 12,
+          "x2": 38.6,
+          "y2": 8,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 38.6,
+          "y1": 8,
+          "x2": 39.4,
+          "y2": 12,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 39.4,
+          "y1": 12,
+          "x2": 40.2,
+          "y2": 8,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 40.2,
+          "y1": 8,
+          "x2": 41,
+          "y2": 12,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 41,
+          "y1": 12,
+          "x2": 41.4,
+          "y2": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 41.4,
+          "y1": 10,
+          "x2": 42,
+          "y2": 10,
+          "strokeMm": 0.25
+        }
+      ],
+      "pins": [
+        {
+          "x": 22.5,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "4",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        },
+        {
+          "x": 31.5,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "2",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        },
+        {
+          "x": 21,
+          "y": 20,
+          "directionX": 0,
+          "directionY": 1,
+          "name": "5",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        },
+        {
+          "x": 27,
+          "y": 20,
+          "directionX": 0,
+          "directionY": 1,
+          "name": "1",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        },
+        {
+          "x": 33,
+          "y": 20,
+          "directionX": 0,
+          "directionY": 1,
+          "name": "3",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        }
+      ],
+      "source": "aktapokus-electric standart seti",
+      "license": "Apache-2.0 (aktapokus-electric ile birlikte; kendi çizimimiz)",
+      "deviceName": "5/2 valf",
+      "tagLetter": "Q"
+    },
+    {
+      "id": "c818788d-9246-7f18-f8dc-26a58563cb96",
+      "name": "Selenoid valf bobini",
+      "shapes": [
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 4.5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "rect",
+          "x": -4,
+          "y": 4.5,
+          "width": 8,
+          "height": 6,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -4,
+          "y1": 10.5,
+          "x2": 4,
+          "y2": 4.5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 10.5,
+          "x2": 0,
+          "y2": 15,
+          "strokeMm": 0.25
+        }
+      ],
+      "pins": [
+        {
+          "x": 0,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "1",
+          "kind": "Power"
+        },
+        {
+          "x": 0,
+          "y": 15,
+          "directionX": 0,
+          "directionY": 1,
+          "name": "2",
+          "kind": "Power"
+        }
+      ],
+      "source": "aktapokus-electric standart seti",
+      "license": "Apache-2.0 (aktapokus-electric ile birlikte; kendi çizimimiz)",
+      "deviceName": "Selenoid valf",
+      "tagLetter": "Y"
+    },
+    {
+      "id": "2e618cd3-b959-9936-f819-c69b3a7e7522",
+      "name": "Tek yönlü hız kontrol valfi",
+      "shapes": [
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "rect",
+          "x": -5,
+          "y": 5,
+          "width": 10,
+          "height": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -3.5,
+          "y1": 13.5,
+          "x2": 3.5,
+          "y2": 6.5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 3.5,
+          "y1": 6.5,
+          "x2": 1.8,
+          "y2": 7.09,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 3.5,
+          "y1": 6.5,
+          "x2": 2.91,
+          "y2": 8.2,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "circle",
+          "x": 0,
+          "y": 10,
+          "radius": 1,
+          "strokeMm": 0.25,
+          "filled": false
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 15,
+          "x2": 0,
+          "y2": 20,
+          "strokeMm": 0.25
+        }
+      ],
+      "pins": [
+        {
+          "x": 0,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "1",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        },
+        {
+          "x": 0,
+          "y": 20,
+          "directionX": 0,
+          "directionY": 1,
+          "name": "2",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        }
+      ],
+      "source": "aktapokus-electric standart seti",
+      "license": "Apache-2.0 (aktapokus-electric ile birlikte; kendi çizimimiz)",
+      "deviceName": "Hız kontrol valfi",
+      "tagLetter": "Q"
+    },
+    {
+      "id": "0bc2d589-a712-58e8-a59a-c4092b290371",
+      "name": "Silindir (çift etkili)",
+      "shapes": [
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "rect",
+          "x": -5,
+          "y": 5,
+          "width": 10,
+          "height": 20,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -5,
+          "y1": 12,
+          "x2": 5,
+          "y2": 12,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 12,
+          "x2": 0,
+          "y2": 32,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -2.5,
+          "y1": 32,
+          "x2": 2.5,
+          "y2": 32,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -5,
+          "y1": 22,
+          "x2": -9,
+          "y2": 22,
+          "strokeMm": 0.25
+        }
+      ],
+      "pins": [
+        {
+          "x": 0,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "A",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        },
+        {
+          "x": -9,
+          "y": 22,
+          "directionX": -1,
+          "directionY": 0,
+          "name": "B",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        }
+      ],
+      "source": "aktapokus-electric standart seti",
+      "license": "Apache-2.0 (aktapokus-electric ile birlikte; kendi çizimimiz)",
+      "deviceName": "Çift etkili silindir",
+      "tagLetter": "M"
+    },
+    {
+      "id": "2d282a0d-1ac9-9383-23dd-59ae3705341f",
+      "name": "Susturucu (egzoz)",
+      "shapes": [
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 5,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 5,
+          "x2": -3.5,
+          "y2": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": -3.5,
+          "y1": 10,
+          "x2": 3.5,
+          "y2": 10,
+          "strokeMm": 0.25
+        },
+        {
+          "type": "line",
+          "x1": 3.5,
+          "y1": 10,
+          "x2": 0,
+          "y2": 5,
+          "strokeMm": 0.25
+        }
+      ],
+      "pins": [
+        {
+          "x": 0,
+          "y": 0,
+          "directionX": 0,
+          "directionY": -1,
+          "name": "3",
+          "kind": "Pneumatic",
+          "connector": "PushIn",
+          "connectorCode": "Ø6 mm"
+        }
+      ],
+      "source": "aktapokus-electric standart seti",
+      "license": "Apache-2.0 (aktapokus-electric ile birlikte; kendi çizimimiz)",
+      "deviceName": "Susturucu",
+      "tagLetter": "R"
+    }
+  ],
+  "pages": [
+    {
+      "id": "01a1f4a6-ce19-729a-bd58-6523a62b4bf4",
+      "number": "1",
+      "title": "Kapak",
+      "templateId": "0193b000-0000-7000-8000-00000000a301",
+      "kind": "Cover"
+    },
+    {
+      "id": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "number": "2",
+      "title": "Pnömatik devre şeması",
+      "functionNodeId": "01a1f4a6-ce19-74b2-b48e-f1eeec45a47a",
+      "locationNodeId": "01a1f4a6-ce19-7fc3-8391-629acc83374d",
+      "templateId": "0193b000-0000-7000-8000-00000000a301"
+    }
+  ],
+  "placements": [
+    {
+      "id": "01a1f4a6-ce1e-7fcc-8966-83531023b690",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-7a7f-bf1d-203a55c070cc",
+      "role": "Main",
+      "x": 30,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-7831-8e1d-5971588d854e",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-7e9f-a9cd-ae5b32519ca2",
+      "role": "Main",
+      "x": 60,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-717a-98c8-849f4b45cb5c",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-7b58-8391-89c08ef7d15b",
+      "role": "Main",
+      "x": 90,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-79a0-b986-b4235bea8675",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-7802-9251-190c39e1cc32",
+      "role": "Main",
+      "x": 140,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-75c5-ad7a-0aa03b1e8a52",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-7459-bcb3-1426c142b0c5",
+      "role": "Main",
+      "x": 170,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-70ca-8e96-750db933a297",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-7373-b70f-c8829a3d47d0",
+      "role": "Main",
+      "x": 200,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-787b-9633-e9d64b8ea598",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-70af-8c21-01d8b4442ff1",
+      "role": "Main",
+      "x": 240,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-7870-88e0-37cfe399b1b1",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-70ac-aa19-eeb4d2d9d615",
+      "role": "Main",
+      "x": 270,
+      "y": 30,
+      "rotationDeg": 0
+    },
+    {
+      "id": "01a1f4a6-ce1e-7256-9937-c5ac03f0f479",
+      "pageId": "01a1f4a6-ce19-7377-974d-30db492ce49c",
+      "functionId": "01a1f4a6-ce1a-7cc6-bef2-26376b5f22a2",
+      "role": "Main",
+      "x": 300,
+      "y": 30,
+      "rotationDeg": 0
+    }
+  ],
+  "connectionKinds": [
+    {
+      "id": "3ef24909-ee25-9705-8eea-4b4bf241baf9",
+      "name": "Hava hattı",
+      "color": "#0B6FB8",
+      "category": "Pneumatic"
+    },
+    {
+      "id": "6690b5f1-4970-fbc9-1c64-9e90fb47a09b",
+      "name": "Pilot hattı",
+      "color": "#0B6FB8",
+      "style": "Dashed",
+      "category": "Pneumatic"
+    },
+    {
+      "id": "53028af9-d74c-e066-7748-84e11250f578",
+      "name": "Egzoz hattı",
+      "color": "#6E8EA6",
+      "style": "Dotted",
+      "category": "Pneumatic"
+    }
+  ]
+}

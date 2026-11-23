@@ -1,0 +1,23 @@
+{
+  "patchVersion": 1,
+  "source": "user",
+  "description": "Motor 1 için yedek kontaktör eklendi ve PLC'ye bağlandı",
+  "commands": [
+    {
+      "op": "addDevice",
+      "tag": "=M1+P1-K3",
+      "description": "Yedek kontaktör",
+      "part": { "manufacturer": "Schneider Electric", "orderCode": "LC1D09BD" },
+      "functions": [
+        { "kind": "Coil", "description": "Bobin", "connectionPoints": ["A1", "A2"] },
+        { "kind": "NoContact", "description": "Yardımcı NO", "connectionPoints": ["13", "14"] }
+      ]
+    },
+    { "op": "connect", "from": "-A12:3", "to": "-K3:A1", "wire": { "number": "57", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "connect", "from": "-K3:A2", "to": "-T1:-", "wire": { "number": "58", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "connect", "from": "-T1:+", "to": "-K3:13", "wire": { "number": "59", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "connect", "from": "-K3:14", "to": "-A11:8", "wire": { "number": "60", "crossSectionMm2": 0.75, "color": "DBU" } },
+    { "op": "assignIo", "channel": "-A12:3", "symbolName": "bK3Run", "description": "Yedek kontaktör çalış" },
+    { "op": "assignIo", "channel": "-A11:8", "symbolName": "bK3Feedback", "description": "K3 geri bildirim" }
+  ]
+}

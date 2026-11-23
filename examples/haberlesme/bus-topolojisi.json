@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 6,
+  "id": "01a1eedb-50bd-7c71-9826-1ff15bef8079",
+  "name": "Bus topolojisi",
+  "properties": {},
+  "structure": [
+    {
+      "id": "01a1eedb-5092-7858-9706-8da890c9d465",
+      "aspect": "Location",
+      "name": "SC1"
+    },
+    {
+      "id": "01a1eedb-5093-778f-b1e5-6c0ccf772553",
+      "aspect": "Location",
+      "name": "ST1"
+    }
+  ],
+  "devices": [
+    {
+      "id": "01a1eedb-5093-7597-8583-f35a52cfd961",
+      "tag": "KF0",
+      "kind": "Generic",
+      "locationNodeId": "01a1eedb-5092-7858-9706-8da890c9d465",
+      "description": "NCU 710.3B PN",
+      "functions": [
+        {
+          "id": "01a1eedb-5093-782b-bff6-d144369cf435",
+          "kind": "Generic",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "01a1eedb-5093-79ad-a8dc-6cd6f8e57e83",
+              "name": "X150",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5093-7211-be81-73e39e6b4cec",
+              "name": "X120",
+              "kind": "Communication",
+              "connector": "Rj45"
+            }
+          ]
+        }
+      ],
+      "address": "192.168.214.1"
+    },
+    {
+      "id": "01a1eedb-5094-78cd-8b14-c71446f5d2be",
+      "tag": "KF5",
+      "kind": "Generic",
+      "locationNodeId": "01a1eedb-5092-7858-9706-8da890c9d465",
+      "description": "Scalance X108",
+      "functions": [
+        {
+          "id": "01a1eedb-5094-7f46-b7f5-d14508ae276e",
+          "kind": "Generic",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "01a1eedb-5094-7b10-b05b-79a6bc703d5a",
+              "name": "P1",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5094-7b54-a80e-cefcd1a4630d",
+              "name": "P2",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5094-7f06-9ec7-ebd0a1176689",
+              "name": "P3",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5094-7171-995b-f89d8a39033c",
+              "name": "P4",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5094-7d35-b184-324dcdf60bb1",
+              "name": "P5",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5094-7db8-ac0e-095047fdb348",
+              "name": "P6",
+              "kind": "Communication",
+              "connector": "Rj45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1eedb-5094-7ff3-b316-1d284d326bf9",
+      "tag": "KF30",
+      "kind": "Generic",
+      "locationNodeId": "01a1eedb-5092-7858-9706-8da890c9d465",
+      "description": "IM153-4 PN IO HF",
+      "functions": [
+        {
+          "id": "01a1eedb-5094-74fb-8e37-11b8c334e6c2",
+          "kind": "Generic",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "01a1eedb-5094-70f4-9124-5d6b18198143",
+              "name": "X1_P1",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5094-7f64-8816-0f9203acfe7e",
+              "name": "X1_P2",
+              "kind": "Communication",
+              "connector": "Rj45"
+            }
+          ]
+        }
+      ],
+      "address": "192.168.0.50"
+    },
+    {
+      "id": "01a1eedb-5094-78e5-a61e-9e04941ae8b0",
+      "tag": "KF50",
+      "kind": "Generic",
+      "locationNodeId": "01a1eedb-5092-7858-9706-8da890c9d465",
+      "description": "IM151-3 PN",
+      "functions": [
+        {
+          "id": "01a1eedb-5094-7823-afa5-8a353c25c91e",
+          "kind": "Generic",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "01a1eedb-5094-767f-9dea-31bd8c238c2f",
+              "name": "X1_P1",
+              "kind": "Communication",
+              "connector": "Rj45"
+            }
+          ]
+        }
+      ],
+      "address": "192.168.0.51"
+    },
+    {
+      "id": "01a1eedb-5094-7584-a1e3-6d0eba86cf77",
+      "tag": "A20",
+      "kind": "Generic",
+      "locationNodeId": "01a1eedb-5092-7858-9706-8da890c9d465",
+      "description": "OP 012 PCU 50.5-C",
+      "functions": [
+        {
+          "id": "01a1eedb-5094-7aff-85c0-7a631099ba21",
+          "kind": "Generic",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "01a1eedb-5094-77d3-a1a5-6436f2d030a2",
+              "name": "X2",
+              "kind": "Communication",
+              "connector": "Rj45"
+            }
+          ]
+        }
+      ],
+      "address": "192.168.214.241"
+    },
+    {
+      "id": "01a1eedb-5094-7b89-be19-34a02bfccafa",
+      "tag": "X30",
+      "kind": "Generic",
+      "locationNodeId": "01a1eedb-5093-778f-b1e5-6c0ccf772553",
+      "description": "Box PN Plus",
+      "functions": [
+        {
+          "id": "01a1eedb-5094-7163-8003-ce6eeb255326",
+          "kind": "Generic",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "01a1eedb-5094-7c73-8527-38dc70397c86",
+              "name": "P1",
+              "kind": "Communication",
+              "connector": "Rj45"
+            },
+            {
+              "id": "01a1eedb-5094-7ae3-aa19-815d5e35d037",
+              "name": "P2",
+              "kind": "Communication",
+              "connector": "Rj45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01a1eedb-5094-7b6d-a313-f53956966f0e",
+      "tag": "A30",
+      "kind": "Generic",
+      "locationNodeId": "01a1eedb-5093-778f-b1e5-6c0ccf772553",
+      "description": "HT8",
+      "functions": [
+        {
+          "id": "01a1eedb-5094-71b4-b1a3-346d5c5f02b5",
+          "kind": "Generic",
+          "passThrough": false,
+          "connectionPoints": [
+            {
+              "id": "01a1eedb-5094-7ed0-8e9b-63d101dded47",
+              "name": "X1",
+              "kind": "Communication",
+              "connector": "Rj45"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "01a1eedb-50bd-76bb-8b23-1166be832071",
+      "from": "01a1eedb-5093-79ad-a8dc-6cd6f8e57e83",
+      "to": "01a1eedb-5094-7b10-b05b-79a6bc703d5a",
+      "wire": {
+        "id": "01a1eedb-50bd-75c3-8ae1-19427b112a48",
+        "number": "-WKF0.3"
+      },
+      "kind": "fe81f8f0-e9ba-15b3-86db-551b4c867ce3"
+    },
+    {
+      "id": "01a1eedb-50be-70b8-987c-5d321c15d828",
+      "from": "01a1eedb-5094-7f64-8816-0f9203acfe7e",
+      "to": "01a1eedb-5094-7d35-b184-324dcdf60bb1",
+      "wire": {
+        "id": "01a1eedb-50be-7f77-8fbf-08827172da56",
+        "number": "-WKF30"
+      },
+      "kind": "fe81f8f0-e9ba-15b3-86db-551b4c867ce3"
+    },
+    {
+      "id": "01a1eedb-50be-7909-90c0-03481ba063fa",
+      "from": "01a1eedb-5094-767f-9dea-31bd8c238c2f",
+      "to": "01a1eedb-5094-70f4-9124-5d6b18198143",
+      "wire": {
+        "id": "01a1eedb-50be-74d2-ba8f-2c56d5973652",
+        "number": "-WKF50"
+      },
+      "kind": "fe81f8f0-e9ba-15b3-86db-551b4c867ce3"
+    },
+    {
+      "id": "01a1eedb-50be-7ffc-8b14-a8c8f2d21234",
+      "from": "01a1eedb-5094-77d3-a1a5-6436f2d030a2",
+      "to": "01a1eedb-5094-7b54-a80e-cefcd1a4630d",
+      "wire": {
+        "id": "01a1eedb-50be-728e-a2d2-7577696b9736",
+        "number": "-WKF1"
+      },
+      "kind": "96a28cc8-c29c-30b9-2c72-73bedfdd7ee7"
+    },
+    {
+      "id": "01a1eedb-50be-75af-9cac-628ae9a38c18",
+      "from": "01a1eedb-5093-7211-be81-73e39e6b4cec",
+      "to": "01a1eedb-5094-77d3-a1a5-6436f2d030a2",
+      "wire": {
+        "id": "01a1eedb-50be-7fef-a8c4-a9772b87ef04",
+        "number": "-WKF0.2"
+      },
+      "kind": "96a28cc8-c29c-30b9-2c72-73bedfdd7ee7"
+    },
+    {
+      "id": "01a1eedb-50be-7e8d-ae29-cef74c07273a",
+      "from": "01a1eedb-5094-7c73-8527-38dc70397c86",
+      "to": "01a1eedb-5094-7f06-9ec7-ebd0a1176689",
+      "wire": {
+        "id": "01a1eedb-50be-7b0e-8939-a4b44a7c63ef",
+        "number": "-WA10"
+      },
+      "kind": "96a28cc8-c29c-30b9-2c72-73bedfdd7ee7"
+    },
+    {
+      "id": "01a1eedb-50be-7158-b88a-cc60dbe63ad4",
+      "from": "01a1eedb-5094-7ed0-8e9b-63d101dded47",
+      "to": "01a1eedb-5094-7ae3-aa19-815d5e35d037",
+      "wire": {
+        "id": "01a1eedb-50be-7fbf-9c70-95c6d0eaec28",
+        "number": "-WA30"
+      },
+      "kind": "96a28cc8-c29c-30b9-2c72-73bedfdd7ee7"
+    }
+  ],
+  "cables": [],
+  "potentialSources": [],
+  "controllers": [],
+  "sheetTemplates": [
+    {
+      "id": "0193b000-0000-7000-8000-00000000a301",
+      "name": "A3 yatay, 10 kolon",
+      "widthMm": 420,
+      "heightMm": 297,
+      "marginMm": 10,
+      "columns": 10,
+      "rows": 6,
+      "gridBandMm": 5,
+      "titleBlockHeightMm": 20,
+      "fontFamily": "Arial",
+      "firstColumnNumber": 0,
+      "cells": [
+        {
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 70,
+          "heightMm": 20,
+          "fontSizeMm": 3,
+          "align": "Left",
+          "border": true,
+          "imageRef": "logo.png"
+        },
+        {
+          "xMm": 70,
+          "yMm": 0,
+          "widthMm": 130,
+          "heightMm": 20,
+          "content": "{page.title}",
+          "fontSizeMm": 3.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 200,
+          "yMm": 0,
+          "widthMm": 70,
+          "heightMm": 10,
+          "label": "Proje:",
+          "content": "{project.name}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 200,
+          "yMm": 10,
+          "widthMm": 70,
+          "heightMm": 10,
+          "label": "Tarih:",
+          "content": "{project.date}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 270,
+          "yMm": 0,
+          "widthMm": 50,
+          "heightMm": 10,
+          "label": "Çizim no:",
+          "content": "{project.drawingNo}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 270,
+          "yMm": 10,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Fonksiyon:",
+          "content": "{page.function}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 295,
+          "yMm": 10,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Yer:",
+          "content": "{page.location}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 320,
+          "yMm": 0,
+          "widthMm": 20,
+          "heightMm": 10,
+          "label": "Çizen:",
+          "content": "{project.drawnBy}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 340,
+          "yMm": 0,
+          "widthMm": 25,
+          "heightMm": 10,
+          "label": "Rev.:",
+          "content": "{project.revision}",
+          "fontSizeMm": 2.5,
+          "align": "Left",
+          "border": true
+        },
+        {
+          "xMm": 365,
+          "yMm": 0,
+          "widthMm": 35,
+          "heightMm": 10,
+          "label": "Sayfa:",
+          "content": "{page.number}",
+          "fontSizeMm": 4,
+          "align": "Right",
+          "border": true
+        },
+        {
+          "xMm": 320,
+          "yMm": 10,
+          "widthMm": 40,
+          "heightMm": 10,
+          "label": "Toplam sayfa:",
+          "content": "{page.count}",
+          "fontSizeMm": 2.5,
+          "align": "Right",
+          "border": true
+        },
+        {
+          "xMm": 360,
+          "yMm": 10,
+          "widthMm": 40,
+          "heightMm": 10,
+          "label": "Sonraki sayfa:",
+          "content": "{page.next}",
+          "fontSizeMm": 2.5,
+          "align": "Right",
+          "border": true
+        }
+      ]
+    }
+  ],
+  "symbols": [],
+  "pages": [
+    {
+      "id": "01a1eedb-50bd-74d9-9a3a-d8e4e3db62b1",
+      "number": "1",
+      "title": "Haberleşme şeması",
+      "templateId": "0193b000-0000-7000-8000-00000000a301",
+      "kind": "CommunicationDiagram"
+    }
+  ],
+  "placements": [],
+  "connectionKinds": [
+    {
+      "id": "fe81f8f0-e9ba-15b3-86db-551b4c867ce3",
+      "name": "Profinet",
+      "color": "#2E9E2E",
+      "category": "Communication"
+    },
+    {
+      "id": "96a28cc8-c29c-30b9-2c72-73bedfdd7ee7",
+      "name": "Ethernet",
+      "color": "#1B5E20",
+      "style": "DashDot",
+      "category": "Communication"
+    }
+  ]
+}

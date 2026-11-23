@@ -1,0 +1,16 @@
+<definition width="40" height="60" hotspot_x="20" hotspot_y="30" orientation="dyyy" type="element" link_type="simple" version="0.80">
+    <names>
+        <name lang="en">Indicator lamp</name>
+        <name lang="tr">Sinyal lambası</name>
+    </names>
+    <informations>aktapokus-electric örnek elemanı, elle yazıldı. Lisans: Apache-2.0</informations>
+    <description>
+        <line x1="0" y1="-30" x2="0" y2="-10" end1="none" end2="none"/>
+        <circle x="-10" y="-10" diameter="20" antialias="true"/>
+        <polygon x1="-7" y1="-7" x2="7" y2="7" closed="false" antialias="true"/>
+        <polygon x1="-7" y1="7" x2="7" y2="-7" closed="false" antialias="true"/>
+        <line x1="0" y1="10" x2="0" y2="30" end1="none" end2="none"/>
+        <terminal x="0" y="-30" orientation="n"/>
+        <terminal x="0" y="30" orientation="s"/>
+    </description>
+</definition>

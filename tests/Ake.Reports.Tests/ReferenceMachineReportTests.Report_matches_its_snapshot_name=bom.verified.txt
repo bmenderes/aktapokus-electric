@@ -1,0 +1,19 @@
+﻿Poz,Adet,Üretici,Sipariş kodu,Tip,Açıklama,Tag
+1,1,Beckhoff,CX5130,,Endüstriyel PC,=C1+P1-A1
+2,1,Beckhoff,EK1100,,EtherCAT coupler,=C1+P1-A10
+3,1,Beckhoff,EL1008,,8 kanal dijital giriş,=C1+P1-A11
+4,1,Beckhoff,EL2008,,8 kanal dijital çıkış,=C1+P1-A12
+5,2,Schneider Electric,GV2ME10,,Motor koruma şalteri 1,"=M1+P1-F1, =M2+P1-F2"
+6,2,Schneider Electric,LC1D09BD,"TeSys D 9 A, 24 VDC bobin",Motor kontaktörü 1,"=M1+P1-K1, =M2+P1-K2"
+7,2,,,4G1.5,Kablo,"-W1, -W2"
+8,1,,,,Şebeke giriş klemensleri,=G1+P1-X0
+9,1,,,,Ana şalter,=G1+P1-Q1
+10,1,,,,Konveyör motoru 1,=M1+S1-M1
+11,1,,,,Konveyör motoru 2,=M2+S1-M2
+12,1,,,,Motor çıkış klemensleri,=G1+P1-X1
+13,1,,,,Besleme sigortası,=C1+P1-F3
+14,1,,,,24 VDC güç kaynağı,=C1+P1-T1
+15,1,,,,Acil stop butonu,=E1+P1-S0
+16,1,,,,Güvenlik rölesi,=E1+P1-K0
+17,1,,,,Start butonu,=C1+P1-S1
+18,1,,,,Stop butonu,=C1+P1-S2

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <EmbeddedResource Include="Knowledge/bilgi.json" LogicalName="Ake.Ai.Knowledge.bilgi.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ake.Core\Ake.Core.csproj" />
+    <ProjectReference Include="..\Ake.Serialization\Ake.Serialization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Ake.Ai.Tests" />
+  </ItemGroup>
+
+</Project>

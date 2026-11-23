@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="aktapokus-electric">
+  <title>aktapokus-electric</title>
+  <rect width="256" height="256" rx="56" fill="#FFD500"/>
+  <rect x="10" y="10" width="236" height="236" rx="48" fill="none" stroke="#1A1400" stroke-width="6"/>
+  <polygon points="152,26 64,138 118,138 96,230 194,104 138,104 172,26" fill="#1A1400" stroke="#1A1400" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="52" cy="204" r="9" fill="#1A1400"/>
+  <circle cx="204" cy="52" r="9" fill="#1A1400"/>
+  <path d="M52 204 H78 M204 52 H178" stroke="#1A1400" stroke-width="6" stroke-linecap="round"/>
+</svg>

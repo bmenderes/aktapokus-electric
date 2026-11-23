@@ -1,0 +1,76 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:Ake.Editor"
+        x:Class="Ake.Editor.MainWindow"
+        Title="aktapokus-electric"
+        Width="1440"
+        Height="900"
+        WindowState="Maximized">
+
+    <DockPanel>
+        <local:RibbonView x:Name="Ribbon" DockPanel.Dock="Top" />
+
+        <!-- Durum çubuğu: bildirim ve proje özeti | imleç | ızgara | ERC -->
+        <Border DockPanel.Dock="Bottom" Classes="status">
+            <Grid ColumnDefinitions="*,Auto,Auto,Auto">
+                <TextBlock x:Name="StatusText" Grid.Column="0" Margin="10,3" TextTrimming="CharacterEllipsis" />
+                <Border Grid.Column="1" Classes="status-cell" MinWidth="150">
+                    <TextBlock x:Name="PointerText" Text="X —  Y —" />
+                </Border>
+                <Border Grid.Column="2" Classes="status-cell">
+                    <TextBlock x:Name="GridText" />
+                </Border>
+                <Border Grid.Column="3" Classes="status-cell" MinWidth="120">
+                    <TextBlock x:Name="ErcText" />
+                </Border>
+            </Grid>
+        </Border>
+
+        <!-- Taşınabilir paneller ve sayfa sekmeleri (EditorLayout, ADR-0024) -->
+        <ContentControl x:Name="DockHost" Margin="2" />
+
+        <!-- Panel içerikleri. Açılışta EditorLayout bunları Dock panellerine taşır; burada görünmezler. -->
+        <Panel x:Name="Parts" IsVisible="False">
+            <DockPanel x:Name="PagesPart" Margin="4">
+                <!-- Grafik önizleme: seçili sayfanın küçük resmi (ADR-0051). -->
+                <Border DockPanel.Dock="Bottom" Height="150" Margin="0,4,0,0" BorderThickness="1" BorderBrush="{StaticResource LineBrush}" Background="White" ClipToBounds="True">
+                    <local:SceneView x:Name="PagePreview" IsHitTestVisible="False" />
+                </Border>
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Spacing="4" Margin="0,4,0,0">
+                    <ToggleButton x:Name="PageTreeModeButton" Content="Ağaç" IsChecked="True" Padding="10,2" />
+                    <ToggleButton x:Name="PageListModeButton" Content="Liste" Padding="10,2" />
+                </StackPanel>
+                <Grid DockPanel.Dock="Top" ColumnDefinitions="Auto,*" Margin="0,0,0,4">
+                    <ComboBox x:Name="PageFilterFieldBox" Width="104" Margin="0,0,4,0" />
+                    <TextBox x:Name="PageFilter" Grid.Column="1" PlaceholderText="Sayfa ara" />
+                </Grid>
+                <ListBox x:Name="PageTree" Classes="nav" />
+            </DockPanel>
+            <ListBox x:Name="DeviceList" Classes="nav" />
+            <ListBox x:Name="PotentialList" Classes="nav" />
+            <ListBox x:Name="TerminalList" Classes="nav" />
+            <ListBox x:Name="PlcList" Classes="nav" />
+            <ListBox x:Name="CableList" Classes="nav" />
+            <DockPanel x:Name="SymbolsPart" Margin="4">
+                <TextBox x:Name="SymbolSearch" DockPanel.Dock="Top" PlaceholderText="Sembol ara" Margin="0,4" />
+                <CheckBox x:Name="FitOnly" DockPanel.Dock="Top" Content="Seçili cihaza uyanlar" IsChecked="True" />
+                <Button x:Name="VisualSymbolPickerButton" DockPanel.Dock="Bottom" Content="Görsel sembol seçici…" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0,4" />
+                <Button x:Name="EditSymbolButton" DockPanel.Dock="Bottom" Content="Sembolü düzenle…" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0,4" />
+                <Button x:Name="PlaceSymbolButton" DockPanel.Dock="Bottom" Content="Sayfaya yerleştir" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0,4" />
+                <Button x:Name="AssignSymbolButton" DockPanel.Dock="Bottom" Content="Seçili sembole ata" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0,4" />
+                <Border DockPanel.Dock="Bottom" Height="170" Margin="0,4" BorderThickness="1" BorderBrush="{StaticResource LineBrush}">
+                    <local:SceneView x:Name="SymbolPreview" />
+                </Border>
+                <TextBlock x:Name="LibraryInfo" DockPanel.Dock="Bottom" Margin="2,4" TextWrapping="Wrap" Foreground="{StaticResource MutedBrush}" />
+                <TreeView x:Name="SymbolList">
+                    <TreeView.Styles>
+                        <Style Selector="TreeViewItem">
+                            <Setter Property="IsExpanded" Value="{ReflectionBinding Expanded, Mode=OneWay}" />
+                        </Style>
+                    </TreeView.Styles>
+                </TreeView>
+            </DockPanel>
+            <ListBox x:Name="MessageList" Classes="nav" />
+        </Panel>
+    </DockPanel>
+</Window>
