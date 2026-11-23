@@ -11,7 +11,7 @@ sayfalarını ekranda görmek. Düzenleme henüz yoktur.
 
 Proje sahibinin başka projelerde koyduğu arayüz ilkeleri burada da uygulanır: yazı tipi Lora
 (sistem varsayılanı kullanılmaz), tek satırlık öğeler, açıklama metni yok, açılır pencere yok.
-Yol haritasındaki "EPLAN benzeri dock'lanabilir paneller" bu ilkelerle kısmen çelişir; çelişki bu
+Yol haritasındaki "Yaygın E-CAD araçları gibi dock'lanabilir paneller" bu ilkelerle kısmen çelişir; çelişki bu
 dilimde ortaya çıkmadı ve navigator'lar eklenirken proje sahibine sorulacaktır.
 
 ## Kararlar

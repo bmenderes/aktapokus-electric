@@ -23,7 +23,7 @@ Kararlar: [docs/adr/](docs/adr/). Yeni bir işe başlamadan önce ikisini de oku
 - Diğer `src/` projeleri Core'a bağımlıdır; Core hiçbirine bağımlı değildir.
 - Beklenen başarısızlık `Result` döner, programcı hatası exception fırlatır (ADR-0002).
 - GPL bağımlılık ve QuestPDF eklenmez; yeni NuGet paketinde lisansı kontrol et.
-- Hiçbir yerde (kod, arayüz metni, doküman) "EPLAN" marka adı kullanılmaz.
+- Hiçbir yerde (kod, arayüz metni, doküman) rakip E-CAD ürünlerinin marka adları kullanılmaz.
 - Python yalnızca `tools/freecad/` altında.
 
 ## Komutlar

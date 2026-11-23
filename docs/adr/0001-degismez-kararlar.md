@@ -45,13 +45,13 @@ Bu ADR'deki bir kararı değiştirmek için onu geçersiz kılan yeni bir ADR ya
 |---|---|
 | Lisans | Kendi kodumuz Apache-2.0. GPL bağımlılık **eklenmez**. |
 | Üretici verisi | Uygulama üretici kütüphanesi **dağıtmaz**; kullanıcı import eder. Her kayıtta `source` ve `license` alanı zorunludur. |
-| İsimlendirme | Hiçbir yerde "EPLAN" marka adı kullanılmaz. |
+| İsimlendirme | Hiçbir yerde rakip E-CAD ürünlerinin marka adları kullanılmaz. |
 
 ### Ürün
 
 | Konu | Karar |
 |---|---|
-| Arayüz paradigması | EPLAN benzeri kullanım alışkanlığı: navigator'lar, dock'lanabilir paneller, özellik diyaloğu. Görsel kopya değil, iş akışı benzerliği. |
+| Arayüz paradigması | Yaygın E-CAD araçlarına benzer kullanım alışkanlığı: navigator'lar, dock'lanabilir paneller, özellik diyaloğu. Görsel kopya değil, iş akışı benzerliği. |
 | Standart | IEC 81346 reference designation (`=` fonksiyon, `+` yer, `-` ürün) ve IEC 60617 semboller. |
 
 ### Dağıtım ve performans

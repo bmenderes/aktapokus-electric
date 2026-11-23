@@ -26,8 +26,8 @@
 | Minimum sistem | Windows 10/11 x64, **4 GB RAM**, entegre GPU (Skia CPU fallback çalışmalı), 2 çekirdek |
 | Performans hedefi | Soğuk açılış < 3 sn; 300 sayfalık projede açık sayfa dışı render yok; RAM < 300 MB (AI kapalı) |
 | AI | Opsiyonel modül; kapalıyken hiç yüklenmez (düşük konfig etkilenmez) |
-| UI paradigması | **EPLAN benzeri kullanım alışkanlığı** (navigator'lar, dock'lanabilir paneller, özellik diyaloğu) — görsel kopya değil, iş akışı benzerliği |
-| İsimlendirme | Hiçbir yerde "EPLAN" marka adı kullanılmayacak |
+| UI paradigması | **Yaygın E-CAD araçlarına benzer kullanım alışkanlığı** (navigator'lar, dock'lanabilir paneller, özellik diyaloğu) — görsel kopya değil, iş akışı benzerliği |
+| İsimlendirme | Hiçbir yerde rakip E-CAD ürünlerinin marka adı kullanılmayacak |
 | Standart | IEC 81346 reference designation (=Fonksiyon +Yer -Ürün), IEC 60617 semboller |
 | Üretici verisi | Uygulama üretici kütüphanesi **dağıtmaz**; kullanıcı import eder. Her kayıtta `source` + `license` alanı zorunlu |
 
@@ -268,7 +268,7 @@ Standart bir E-CAD'de hazır gelen şeylerin elle yazılması beklenmez. Sıra v
 
 ## Faz 6 — Etkileşimli Editör (Avalonia)
 
-### Yerleşim (EPLAN alışkanlığına uygun)
+### Yerleşim (yaygın E-CAD alışkanlığına uygun)
 - [ ] Dock altyapısı: **Dock** kütüphanesi (Avalonia, MIT) — panel konumları kullanıcı profiline kaydedilir
 - [ ] Orta alan: sekmeli grafik editör (birden fazla sayfa açık)
 - [ ] Sol: **Sayfa navigator** (=/+ yapısına göre ağaç + liste görünümü, filtre)
@@ -277,7 +277,7 @@ Standart bir E-CAD'de hazır gelen şeylerin elle yazılması beklenmez. Sıra v
 - [ ] Üst: menü + toolbar (ribbon Faz 6 sonrası; Avalonia'da olgun ücretsiz ribbon olmadığı için önce toolbar)
 - [ ] Alt: mesaj yönetimi (ERC sonuçları, tıkla → nesneye git), durum çubuğunda koordinat/grid
 - [ ] **Özellik diyaloğu** (çift tık): sekmeli — tag, function, ürün, bağlantı noktaları, görüntüleme
-- [ ] **Kısayol profili:** yapılandırılabilir keymap; EPLAN kullanıcısına tanıdık varsayılan set (dokümante edilmiş JSON)
+- [ ] **Kısayol profili:** yapılandırılabilir keymap; E-CAD kullanıcısına tanıdık varsayılan set (dokümante edilmiş JSON)
 - [ ] Sağ tık bağlam menüleri, sayfa arası atlama (çapraz referansa tıkla → hedef sayfa)
 
 ### Fonksiyonlar
@@ -384,11 +384,11 @@ Proje sahibinin Faz 1 sırasında eklediği gereksinimler. Her biri ilgili fazı
 - **DXF / DWG içe aktarma (editörde düzenlenebilir).** Faz 4'teki sembol import'undan farklıdır:
   bütün bir çizim sayfaya alınır. İçe alınan çizim yalnızca grafiktir, elektriksel anlam taşımaz;
   bunun için modelde "serbest grafik" nesnesi gerekir (Faz 5/6). DWG tarafı yukarıdaki karara bağlı.
-- **Başka E-CAD araçlarından proje aktarma (EPLAN, SEE Electrical).** Ek özellik. **Araştırma
+- **Başka E-CAD araçlarından proje aktarma (diğer E-CAD araçları, SEE Electrical).** Ek özellik. **Araştırma
   gerekiyor:** bu araçların yerel proje formatları kapalıdır; gerçekçi yol, onların dışa aktardığı
   dosyalardan (DXF/DWG, XML, liste çıktıları) okumaktır. Grafikten elektriksel modeli geri kurmak
   (sembol ve bağlantı tanıma) ayrı ve büyük bir iştir. **Karar bekliyor:** Bölüm 0'daki "hiçbir
-  yerde EPLAN marka adı kullanılmayacak" kuralı, içe aktarma menüsünde kaynak formatı adlandırmayı
+  yerde rakip marka adı kullanılmayacak" kuralı, içe aktarma menüsünde kaynak formatı adlandırmayı
   da kapsıyor mu?
 
 ### Örnek proje (`Ornek/`, depoya girmez)
